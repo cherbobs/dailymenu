@@ -1,0 +1,164 @@
+/* IMPORT POLICE POPPINS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* BASE GÉNÉRALE */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #111;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.5;
+  background-color: #fff;
+}
+
+/* TITRES */
+h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+/* TEXTE SECONDAIRE */
+.small {
+  font-size: 14px;
+  font-weight: 400;
+  color: #666;
+}
+
+.breadcrumb {
+  font-size: 16px;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+/* SECTIONS TEXTE À GAUCHE */
+.intro-tarifs,
+.documents-necessaires {
+  max-width: 800px;
+  margin: 2rem 0 2rem 80px;
+}
+
+.alerte {
+  background-color: #fff3cd;
+  border-left: 5px solid #f0ad4e;
+  padding: 1rem;
+  margin-top: 1.5rem;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* LISTE DES DOCUMENTS */
+.documents-necessaires ul {
+  padding-left: 1.5rem;
+  margin-top: 1rem;
+}
+
+.documents-necessaires li {
+  margin-bottom: 0.5rem;
+}
+
+/* CONTENEUR TARIFS CENTRÉ */
+.tarifs-container {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+/* GRILLE DES TARIFS */
+.tarif-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 220px;
+  margin-bottom: 20px;
+}
+
+/* LIGNE D’EN-TÊTE (TRANCHE / QUOTIENT / TARIF) */
+.tarif-row.header {
+  margin-bottom: 142px;
+}
+
+.header .tranche-num {
+  background-color: #FF8C00;
+  color: white;
+}
+
+.header .info-box {
+  background-color: #f6f6f6;
+  color: #111;
+}
+
+/* TRANCHE – pastille ronde */
+.tranche-num {
+  width: 100px;
+  height: 46px;
+  padding: 8px 16px;
+  border-radius: 42px;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: #111;
+  text-align: center;
+}
+
+/* TRANCHE impaire en orange */
+.tranche-num.highlight {
+  background-color: #FF8C00;
+  color: white;
+}
+
+/* BLOC QUOTIENT + TARIF */
+.info-box {
+  width: 597px;
+  height: 62px;
+  background-color: #f0f0f0;
+  border-radius: 42px;
+  padding: 0 42px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* RESPONSIVE SIMPLE */
+@media (max-width: 768px) {
+  .tarif-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .info-box {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  .tarifs-container {
+    padding: 1rem;
+  }
+
+  .intro-tarifs,
+  .documents-necessaires {
+    margin: 2rem 1rem;
+  }
+}
