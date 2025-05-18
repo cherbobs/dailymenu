@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Accessibilité | DailyMenu</title>
+
+  <!-- Fonts & Styles -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/accessibilite.css" />
+</head>
+<body>
+  <div id="navbar-container"></div>
+
+  <main>
+
+    <!-- SECTION INTRO -->
+    <section class="intro-accessibility">
+      <p class="breadcrumb"><a href="index.html">Page d’accueil</a> > Accessibilité</p>
+      <h1>Accessibilité</h1>
+    </section>
+
+    <!-- SECTION CHOIX ACCESSIBILITE -->
+    <section class="accessibility-choice-save-container">
+        <div class="accessibility-choice-container">
+            <div class="mode-container">
+                <p><strong>Mode contraste</strong></p>
+                <div class="toggle-switch" id="toggleBtn1">
+                    <div class="toggle-circle"></div>
+                </div>
+                  <p id="status1">État : OFF</p> 
+            </div>
+            <div class="size-container">
+                <p><strong>Taille du texte</strong></p>
+                <input type="range" id="slider" min="10" max="50" value="16">
+                <p id="value">16 px</p>
+                <div id="text">Ce texte change de taille !</div>
+            </div>
+            <div class="mode-container">
+                <p><strong>Mode dyslexique</strong></p>
+                <div class="toggle-switch" id="toggleBtn2">
+                    <div class="toggle-circle"></div>
+                </div>
+                  <p id="status2">État : OFF</p>
+            </div>
+            <p class="clear-container">Réinitialiser les paramètres</p>
+        </div>
+        <button class="custom-button">Enregistrer</button>
+    </section>
+
+  </main>
+
+  <!-- Script pour charger la navbar dynamiquement -->
+  <script src="navbar.js"></script>
+   <!-- Script pour animer les toggle et le slider -->
+   <script src="accessibilite.js"></script>
+</body>
+</html>
