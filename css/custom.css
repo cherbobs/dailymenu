@@ -1,0 +1,328 @@
+.corps {
+    max-width: 95%;
+
+    margin: 0 auto;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-bottom: 3px solid #f7931e;
+    font-family: 'Arial', sans-serif;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.brand-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f7931e;
+    margin-left: 0.5rem;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo {
+    height: 40px;
+}
+
+.flag {
+    margin-left: 0.5rem;
+}
+
+.search-section {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+    margin: 0 2rem;
+}
+
+.search-section input[type="search"] {
+    width: 100%;
+    padding: 0.6rem 2.5rem 0.6rem 1rem;
+    border: 1px solid #dcdde1;
+    border-radius: 20px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-section button {
+    position: absolute;
+    top: 50%;
+    right: 0.8rem;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    line-height: 0;
+}
+
+.search-section button svg {
+    width: 20px;
+    height: 20px;
+    stroke: #000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-links a[aria-current="page"]::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #f7931e;
+}
+
+/* Reset utile */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-bottom: 3px solid #f7931e;
+    font-family: 'Arial', sans-serif;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.brand-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f7931e;
+    margin-left: 0.5rem;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo {
+    height: 40px;
+}
+
+.flag {
+    margin-left: 0.5rem;
+}
+
+.search-section {
+    position: relative;
+    flex: 1;
+    max-width: 400px;
+    margin: 0 2rem;
+}
+
+.search-section input[type="search"] {
+    width: 100%;
+    padding: 0.6rem 2.5rem 0.6rem 1rem;
+    border: 1px solid #dcdde1;
+    border-radius: 20px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-section button {
+    position: absolute;
+    top: 50%;
+    right: 0.8rem;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    line-height: 0;
+}
+
+.search-section button svg {
+    width: 20px;
+    height: 20px;
+    stroke: #000;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+    position: relative;
+}
+
+.nav-links a[aria-current="page"]::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #f7931e;
+}
+
+.cta .btn-pay {
+    background-color: #f7931e;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.cta .btn-pay:hover {
+    background-color: #e67e00;
+}
+
+/* Accessibilité supplémentaire */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+.subtitles-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 20px 0 10px 0;
+}
+
+.subtitles-links a {
+    text-decoration: none;
+    font-weight: 400;
+    color: black;
+    font-size: 12px;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto 40px auto;
+}
+
+.box {
+    width: 180px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 0 0 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+}
+
+.box img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.box h3 {
+    margin: 0 0 6px 0;
+    font-size: 15px;
+    color: #333;
+}
+
+.box p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.main-title {
+    text-align: start;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+.subtitles-links {
+    display: flex;
+    justify-content: start;
+    gap: 40px;
+    margin: 20px 0 10px 0;
+}
+
+
+
+/* 3 premières boxes à 30% de largeur (3 dans une ligne) */
+.box-container>.box:nth-child(-n+3) {
+    flex: 0 0 30%;
+}
+
+/* boxes 4 et 5 à 45% de largeur (2 dans la ligne du bas) */
+.box-container>.box:nth-child(n+4) {
+    flex: 0 0 30%;
+}
+
+/* optionnel: margin-bottom pour espacer lignes */
+
+.box {
+    flex: 0 0 400px;
+    /* même largeur pour toutes */
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 0 0 15px 0;
+    border-radius: 8px;
+    border: 1px solid orange;
+    margin-bottom: 20px;
+}
