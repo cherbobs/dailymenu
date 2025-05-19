@@ -1,10 +1,9 @@
 html{
   font-size: 16px;
+  margin: 0;
 }
 main {
-  padding: 2rem;
-  max-width: 1000px;
-  margin: auto;
+  padding: 3rem;
 }
 
 h1 {
@@ -36,14 +35,27 @@ h4{
   font-size: var(--h4-font-size);
 }
 
+
 .date {
   color: #ff9500;
-  margin-bottom: 2rem;
 }
 
-.menu-section {
+.menu-date-section {
   display: flex;
-  gap: 2rem;
+  padding: 0px 72px;
+  flex-direction: column;
+  align-items: center;
+  gap: 52px;
+  align-self: stretch;
+}
+
+.menu-section{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: 90px;
+  align-self: stretch;
   flex-wrap: wrap;
 }
 
