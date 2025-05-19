@@ -48,7 +48,7 @@
   
       --texte-font-family: "Roboto Regular", Helvetica;
       --texte-font-weight: 400;
-      --texte-font-size: 1.5rem;
+      --texte-font-size: 1.25rem;
 
       --texte-allergenes-font-family: "Roboto Regular", Helvetica;
       --texte-allergenes-font-weight: 400;
@@ -56,7 +56,7 @@
 
       --texte-breadcrumb-font-family: "Roboto Regular", Helvetica;
       --texte-breadcrumb-font-weight: 400;
-      --texte-breadcrumb-font-size: 1rem;
+      --texte-breadcrumb-font-size: 1.5rem;
   
  
     }

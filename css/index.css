@@ -35,6 +35,7 @@ h4{
   font-weight: var(--h4-font-weight);
   font-size: var(--h4-font-size);
 }
+
 .date {
   color: #ff9500;
   margin-bottom: 2rem;
