@@ -140,7 +140,18 @@ h3 {
   font-size: 18px;
 }
 
-/* RESPONSIVE SIMPLE */
+/* ================== RESPONSIVE ================== */
+@media (max-width: 1024px) {
+  .tarif-row {
+    gap: 100px;
+  }
+
+  .info-box {
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+
 @media (max-width: 768px) {
   .tarif-row {
     flex-direction: column;
@@ -148,17 +159,40 @@ h3 {
     gap: 10px;
   }
 
+  .tranche-num {
+    width: 80px;
+    height: 40px;
+    font-size: 16px;
+  }
+
   .info-box {
     width: 100%;
     padding: 0 20px;
+    font-size: 16px;
   }
 
   .tarifs-container {
     padding: 1rem;
   }
 
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .breadcrumb {
+    font-size: 14px;
+  }
+
   .intro-tarifs,
   .documents-necessaires {
     margin: 2rem 1rem;
+  }
+
+  .documents-necessaires li {
+    font-size: 14px;
   }
 }
