@@ -1,14 +1,110 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
 
-h1, h2, h3 {
-    font-family: 'Poppins';
-}
 
-p {
-    font-family: 'Roboto';
-}
+:root {
+    /* Couleurs */
+    --orange: #FF8C00;
+  }
+  
+  /* Format desktop */
+  @media only screen and (min-width: 1025px) {
+    :root {
+      /* Polices */
+      --header-font-family: "Roboto Regular", Helvetica;
+      --header-font-weight: 500;
+      --header-font-size: 1rem;
+      --header-letter-spacing: 0px;
+      --header-line-height: normal;
+  
+      --button-font-family: "Roboto Medium", Helvetica;
+      --button-font-weight: 600;
+      --button-font-size: 20px;
+      --button-letter-spacing: 0px;
+      --button-line-height: normal;
+      --button-font-style: normal;
+  
+      --h1-font-family: "Poppins Bold", Helvetica;
+      --h1-font-weight: 700;
+      --h1-font-size: 2.5rem;
 
-strong {
-    font-family: 'Roboto';
-}
+  
+      --h2-font-family: "Poppins SemiBold", Helvetica;
+      --h2-font-weight: 600;
+      --h2-font-size: 2rem;
+
+  
+      --h3-font-family: "Poppins SemiBold", Helvetica;
+      --h3-font-weight: 700;
+      --h3-font-size: 1.5rem;
+
+  
+      --h4-font-family: "Roboto Medium", Helvetica;
+      --h4-font-weight: 500;
+      --h4-font-size: 1.25rem;
+
+  
+      --h5-font-family: "Poppins Bold", Helvetica;
+      --h5-font-weight: 700;
+      --h5-font-size: 20px;
+
+  
+      --texte-font-family: "Roboto Regular", Helvetica;
+      --texte-font-weight: 400;
+      --texte-font-size: 1.5rem;
+
+      --texte-allergenes-font-family: "Roboto Regular", Helvetica;
+      --texte-allergenes-font-weight: 400;
+      --texte-allergenes-font-size: 0.75rem;
+  
+ 
+    }
+  }
+  
+  /* Format tablet */
+  
+  @media only screen and (min-width: 601px) and (max-width: 1024px) {
+    :root {
+     
+      /* Spacing */
+      --petalarge: 72px;
+      --teralarge: 64px;
+      --gigalarge: 52px;
+      --megalarge: 40px;
+      --kilolarge: 36px;
+      --large: 32px;
+      --centilarge: 24px;
+      --mililarge: 20px;
+      --microlarge: 16px;
+      --nanolarge: 12px;
+      --picolarge: 8px;
+  
+      /* Sprites */
+    }
+  }
+  
+  /* Format mobile */
+  
+  @media only screen and (max-width: 600px) {
+    :root {
+      /* Polices */
+  
+
+  
+      /* Spacing */
+      --petalarge: 64px;
+      --teralarge: 52px;
+      --gigalarge: 44px;
+      --megalarge: 36px;
+      --kilolarge: 32px;
+      --large: 24px;
+      --centilarge: 20px;
+      --mililarge: 16px;
+      --microlarge: 12px;
+      --nanolarge: 8px;
+      --picolarge: 8px;
+  
+      /* Sprites */
+
+    }
+  }
