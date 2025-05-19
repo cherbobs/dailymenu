@@ -13,52 +13,34 @@
 <body>
   <div id="navbar-container"></div>
 
-  <main>
-
-    <!-- SECTION INTRO -->
-    <section class="intro-tarifs">
+  <main id="contenu-principal" role="main">
+    
+    <!-- Fil d’Ariane -->
+    <nav aria-label="Fil d’Ariane">
       <p class="breadcrumb"><a href="index.html">Page d’accueil</a> > Tarifs</p>
+    </nav>
+
+    <!-- SECTION INTRODUCTION -->
+    <section class="intro-tarifs">
       <h1>Tarifs</h1>
       <p><strong>La période d'inscription s'étend du 1er juin au 23 août 2025</strong></p>
       <p>Si vous n’avez pas encore effectué cette démarche, nous vous invitons à vous inscrire en ligne ou à vous présenter à l’accueil de la Caisse des écoles.</p>
 
-      <div class="alerte">
+      <!-- Alerte importante -->
+      <div class="alerte" role="alert">
         <strong>Attention :</strong> Passé cette date limite, le tarif maximal (tarif 10) sera appliqué à votre facture jusqu’à régularisation.
       </div>
     </section>
 
-    <!-- SECTION TARIFS -->
-    <section class="tarifs-container">
-
-      <!-- En-tête -->
-      <div class="tarif-row header">
-        <div class="tranche-num highlight">Tranche</div>
-        <div class="info-box header-box">
-          <span>Quotient familial</span>
-          <span>Tarif</span>
-        </div>
-      </div>
-
-      <!-- Lignes tarifaires -->
-      <div class="tarif-row spaced">
-        <div class="tranche-num highlight">1</div>
-        <div class="info-box"><span>De 0 € à 234 €</span><span>0,13 €</span></div>
-      </div>
-      <div class="tarif-row"><div class="tranche-num">2</div><div class="info-box"><span>De 234,01 € à 384 €</span><span>0,85 €</span></div></div>
-      <div class="tarif-row"><div class="tranche-num highlight">3</div><div class="info-box"><span>De 384,01 € à 548 €</span><span>1,62 €</span></div></div>
-      <div class="tarif-row"><div class="tranche-num">4</div><div class="info-box"><span>De 548,01 € à 959 €</span><span>2,28 €</span></div></div>
-      <div class="tarif-row"><div class="tranche-num highlight">5</div><div class="info-box"><span>De 959,01 € à 1370 €</span><span>3,62 €</span></div></div>
-      <div class="tarif-row"><div class="tranche-num">6</div><div class="info-box"><span>De 1370,01 € à 1900 €</span><span>4,61 €</span></div></div>
-      <div class="tarif-row"><div class="tranche-num highlight">7</div><div class="info-box"><span>De 1900,01 € à 2500 €</span><span>4,89 €</span></div></div>
-      <div class="tarif-row"><div class="tranche-num">8</div><div class="info-box"><span>De 2500,01 € à 3333 €</span><span>5,10 €</span></div></div>
-      <div class="tarif-row"><div class="tranche-num highlight">9</div><div class="info-box"><span>De 3333,01 € à 5000 €</span><span>6,00 €</span></div></div>
-      <div class="tarif-row"><div class="tranche-num">10</div><div class="info-box"><span>Supérieur à 5000 €</span><span>7,00 €</span></div></div>
-
+    <!-- SECTION IMAGE DES TARIFS -->
+    <section class="tarifs-container" aria-labelledby="titre-tarifs-image">
+      <h2 id="titre-tarifs-image" class="sr-only">Tableau des tranches et tarifs</h2>
+      <img src="imgs/tranche.png" alt="Tableau des tranches de quotient familial et tarifs appliqués" class="image-tarifs">
     </section>
 
-    <!-- SECTION DOCUMENTS -->
-    <section class="documents-necessaires">
-      <h2>Les documents nécessaires</h2>
+    <!-- SECTION DOCUMENTS NÉCESSAIRES -->
+    <section class="documents-necessaires" aria-labelledby="titre-documents">
+      <h2 id="titre-documents">Les documents nécessaires</h2>
       <ul>
         <li>Bulletin d’inscription rempli et signé.</li>
         <li>Attestation de paiement CAF (quotient familial) de moins de 3 mois.</li>
@@ -67,10 +49,10 @@
         <li>En garde alternée : joindre le jugement de divorce et préciser les semaines.</li>
       </ul>
     </section>
-
+    
   </main>
 
-  <!-- Script pour charger la navbar dynamiquement -->
+  <!-- Script pour charger dynamiquement la navbar -->
   <script src="navbar.js"></script>
 </body>
 </html>
