@@ -9,6 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/navbar.css" />
   <link rel="stylesheet" href="css/accessibilite.css" />
+  <link rel="stylesheet" href="css/global.css">
 </head>
 <body>
   <div id="navbar-container"></div>
@@ -26,7 +27,7 @@
         
         <!-- Mode contraste -->
         <div class="mode-container">
-          <p><strong>Mode contraste</strong></p>
+          <h4>Mode contraste</h4>
           <button role="switch" aria-checked="false" id="toggleBtn1" aria-labelledby="status1">
             <span class="toggle-circle" aria-hidden="true"></span>
           </button>
@@ -35,7 +36,7 @@
 
         <!-- Taille du texte -->
         <div class="size-container">
-          <p><strong>Taille du texte</strong></p>
+          <h4>Taille du texte</h4>
           <input type="range" id="slider" min="10" max="50" value="16" aria-describedby="value">
           <p id="value">16 px</p>
           <div id="text">Ce texte change de taille !</div>
@@ -43,7 +44,7 @@
 
         <!-- Mode dyslexique -->
         <div class="mode-container">
-          <p><strong>Mode dyslexique</strong></p>
+          <h4>Mode dyslexique</h4>
           <button role="switch" aria-checked="false" id="toggleBtn2" aria-labelledby="status2">
             <span class="toggle-circle" aria-hidden="true"></span>
           </button>
