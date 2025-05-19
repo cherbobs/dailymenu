@@ -4,6 +4,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Menu de la semaine</title>
+  <style>
+    @media print {
+      /* Avoid breaking days across pages /
+      .day {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+    
+      .meal-column {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+    
+      .items {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+    
+      / Optionally hide unnecessary elements in PDF /
+      #navbar-container,
+      .subnav a:not(:last-child) {
+        display: none;
+      }
+    
+      / Optional: adjust margins for print */
+      body {
+        margin: 1cm;
+      }
+    }
+    </style>
   <link rel="stylesheet" href="css/menuweek.css">
   <link rel="stylesheet" href="css/navbar.css">
 </head>
@@ -13,7 +43,7 @@
     
     <div class="subnav">
       <span><a href="index.html" >Page d'accueil</a> &gt;  <a href="#">Menus </a> &gt; <a href="#">Menu de la semaine</a></span>
-      <a href="#">Télécharger le menu de la semaine</a>
+      <a href="#" id="download-menu">Télécharger le menu de la semaine</a>
     </div>
 
     <section class="weekly-menu">
@@ -140,7 +170,52 @@
         </div>
       </div>
 
-      
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script>
+  const brailleMap = {
+    a: '⠁', b: '⠃', c: '⠉', d: '⠙', e: '⠑',
+    f: '⠋', g: '⠛', h: '⠓', i: '⠊', j: '⠚',
+    k: '⠅', l: '⠇', m: '⠍', n: '⠝', o: '⠕',
+    p: '⠏', q: '⠟', r: '⠗', s: '⠎', t: '⠞',
+    u: '⠥', v: '⠧', w: '⠺', x: '⠭', y: '⠽',
+    z: '⠵', ' ': ' ', ',': '⠂', '.': '⠲',
+    ':': '⠒', ';': '⠆', '!': '⠖', '?': '⠦', '\n': '\n'
+  };
+
+  function textToBraille(text) {
+    return text.toLowerCase().split('').map(c => brailleMap[c] || '').join('');
+  }
+
+  document.getElementById("download-menu").addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const menuElement = document.querySelector(".weekly-menu");
+
+    const opt = {
+      margin: 0.5,
+      filename: 'menu_semaine.pdf',
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2 },
+      jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' },
+      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+    };
+
+    html2pdf().set(opt).from(menuElement).save().then(() => {
+      const brailleText = textToBraille(menuElement.innerText);
+      const blob = new Blob([brailleText], { type: 'text/plain;charset=utf-8' });
+      const link = document.createElement("a");
+      link.href = URL.createObjectURL(blob);
+      link.download = "menu_semaine_braille.txt";
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    });
+  });
+</script>
       <script src="navbar.js" defer></script>
     </section>
   </div>

@@ -27,3 +27,4 @@ body { font-family: Arial, sans-serif; color: #333; background: #f8f8f8; }
 .item .info { display: flex; flex-direction: column; }
 .item .info .title { font-weight: bold; font-size: 0.95rem; }
 .item .info .subtitle { font-size: 0.8rem; color: #666; }
+
