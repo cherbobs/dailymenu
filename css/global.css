@@ -5,6 +5,7 @@
   /* Couleurs */
   --primary-color: #ff8c00;
   --dark-primary-color: #e67e00;
+  --light-primary-color: #fff3cd;
   --white: #fff;
   --grey: #555;
   --black: #000;
@@ -57,6 +58,10 @@
     --texte-clear-parameters-font-family: "Poppins Medium", Helvetica;
     --texte-clear-parameters-font-weight: 500;
     --texte-clear-parameters-font-size: 1.5rem;
+
+    --texte-alertes-font-family: "Roboto Regular", Helvetica;
+    --texte-alertes-font-weight: 400;
+    --texte-alertes-font-size: 1rem;
 
     /* Spacing */
     --petalarge: 96px;
@@ -205,7 +210,59 @@
   }
 }
 
+/* BASE GÉNÉRALE */
 html {
   font-size: 16px;
   margin: 0;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--megalarge);
+  padding: var(--megalarge);
+}
+
+a {
+  text-decoration: none;
+  color: var(--grey);
+}
+
+.breadcrumb {
+  color: var(--grey);
+  margin-bottom: var(--mililarge);
+  font-family: var(--texte-breadcrumb-font-family);
+  font-weight: var(--texte-breadcrumb-font-weight);
+  font-size: var(--texte-breadcrumb-font-size);
+}
+
+/* Polices */
+h1 {
+  font-family: var(--h1-font-family);
+  font-weight: var(--h1-font-weight);
+  font-size: var(--h1-font-size);
+  margin-bottom: var(--large);
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--h2-font-family);
+  font-weight: var(--h2-font-weight);
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-family: var(--h3-font-family);
+  font-weight: var(--h3-font-weight);
+  font-size: var(--h3-font-size);
+}
+
+h4 {
+  font-family: var(--h4-font-family);
+  font-weight: var(--h4-font-weight);
+  font-size: var(--h4-font-size);
 }
