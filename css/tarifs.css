@@ -15,7 +15,7 @@ p {
 .intro-tarifs,
 .documents-necessaires {
   white-space: inherit;
-  margin: 0 3rem 80px 0;
+  margin: 0 var(--megalarge) var(--teralarge) 0;
 }
 
 .alerte {

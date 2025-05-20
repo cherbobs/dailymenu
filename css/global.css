@@ -21,7 +21,7 @@
 
     --button-font-family: "Roboto Medium", Helvetica;
     --button-font-weight: 600;
-    --button-font-size: 20px;
+    --button-font-size: 1.25rem;
 
     --h1-font-family: "Poppins Bold", Helvetica;
     --h1-font-weight: 700;
@@ -41,7 +41,7 @@
 
     --h5-font-family: "Poppins Bold", Helvetica;
     --h5-font-weight: 700;
-    --h5-font-size: 20px;
+    --h5-font-size: 1.25rem;
 
     --texte-font-family: "Roboto Regular", Helvetica;
     --texte-font-weight: 400;
@@ -64,17 +64,17 @@
     --texte-alertes-font-size: 1rem;
 
     /* Spacing */
-    --petalarge: 96px;
-    --teralarge: 80px;
-    --gigalarge: 64px;
+    --petalarge: 6rem;
+    --teralarge: 5rem;
+    --gigalarge: 4rem;
     --megalarge: 3rem;
-    --kilolarge: 40px;
-    --large: 36px;
-    --centilarge: 32px;
-    --mililarge: 24px;
-    --microlarge: 16px;
-    --nanolarge: 12px;
-    --picolarge: 8px;
+    --kilolarge: 2.5rem;
+    --large: 2.25rem;
+    --centilarge: 2rem;
+    --mililarge: 1.5rem;
+    --microlarge: 1rem;
+    --nanolarge: 0.75rem;
+    --picolarge: 0.5rem;
   }
 }
 
@@ -89,7 +89,7 @@
 
     --button-font-family: "Roboto Medium", Helvetica;
     --button-font-weight: 600;
-    --button-font-size: 20px;
+    --button-font-size: 1.25rem;
 
     --h1-font-family: "Poppins Bold", Helvetica;
     --h1-font-weight: 700;
@@ -126,19 +126,23 @@
     --texte-clear-parameters-font-family: "Poppins Medium", Helvetica;
     --texte-clear-parameters-font-weight: 500;
     --texte-clear-parameters-font-size: 1.5rem;
+  
+    --texte-alertes-font-family: "Roboto Regular", Helvetica;
+    --texte-alertes-font-weight: 400;
+    --texte-alertes-font-size: 1rem;
 
     /* Spacing */
-    --petalarge: 72px;
-    --teralarge: 64px;
-    --gigalarge: 52px;
-    --megalarge: 40px;
-    --kilolarge: 36px;
-    --large: 32px;
-    --centilarge: 24px;
-    --mililarge: 20px;
-    --microlarge: 16px;
-    --nanolarge: 12px;
-    --picolarge: 8px;
+    --petalarge: 4.5rem;
+    --teralarge: 4rem;
+    --gigalarge: 3.25rem;
+    --megalarge: 2.5rem;
+    --kilolarge: 2.25rem;
+    --large: 2rem;
+    --centilarge: 1.5rem;
+    --mililarge: 1.25rem;
+    --microlarge: 1rem;
+    --nanolarge: 0.75rem;
+    --picolarge: 0.5rem;
 
     /* Sprites */
   }
@@ -155,7 +159,7 @@
 
     --button-font-family: "Roboto Medium", Helvetica;
     --button-font-weight: 600;
-    --button-font-size: 20px;
+    --button-font-size: 1.25rem;
 
     --h1-font-family: "Poppins Bold", Helvetica;
     --h1-font-weight: 700;
@@ -175,7 +179,7 @@
 
     --h5-font-family: "Poppins Bold", Helvetica;
     --h5-font-weight: 700;
-    --h5-font-size: 20px;
+    --h5-font-size: 1.25rem;
 
     --texte-font-family: "Roboto Regular", Helvetica;
     --texte-font-weight: 400;
@@ -193,18 +197,22 @@
     --texte-clear-parameters-font-weight: 500;
     --texte-clear-parameters-font-size: 1.5rem;
 
+    --texte-alertes-font-family: "Roboto Regular", Helvetica;
+    --texte-alertes-font-weight: 400;
+    --texte-alertes-font-size: 1rem;
+
     /* Spacing */
-    --petalarge: 64px;
-    --teralarge: 52px;
-    --gigalarge: 44px;
-    --megalarge: 36px;
-    --kilolarge: 32px;
-    --large: 24px;
-    --centilarge: 20px;
-    --mililarge: 16px;
-    --microlarge: 12px;
-    --nanolarge: 8px;
-    --picolarge: 8px;
+    --petalarge: 4rem;
+    --teralarge: 3.25rem;
+    --gigalarge: 2.75rem;
+    --megalarge: 2.25rem;
+    --kilolarge: 2rem;
+    --large: 1.5rem;
+    --centilarge: 1.25rem;
+    --mililarge: 1rem;
+    --microlarge: 0.75rem;
+    --nanolarge: 0.5rem;
+    --picolarge: 0.5rem;
 
     /* Sprites */
   }
