@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8" />
@@ -10,6 +10,7 @@
 </head>
 
 <body>
+
     <header>
         <nav role="navigation" aria-label="Menu principal" class="navbar">
             <div class="logo-section">
@@ -23,8 +24,7 @@
 
             <div class="search-section">
                 <label for="search" class="sr-only">Rechercher sur le site</label>
-                <input type="search" id="search" name="search" placeholder="Rechercher..."
-                    aria-label="Champ de recherche" />
+                <input type="search" id="search" name="search" placeholder="Rechercher..." aria-label="Champ de recherche" />
                 <button aria-label="Lancer la recherche">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#000"
                         stroke-width="2" viewBox="0 0 24 24">
@@ -47,8 +47,7 @@
         </nav>
     </header>
 
-    <!-- Section principale -->
-    <section>
+    <main id="main-content">
         <div class="corps">
             <div class="subtitles-links">
                 <a href="#link1">Page d'accueil</a>
@@ -59,43 +58,47 @@
 
             <div class="box-container">
                 <div class="box">
-                    <a href="menuweek.html" class="arrow-box" aria-label="Voir le menu de la semaine">
-                        <img src="images/arrow.png" alt="Flèche vers menu" class="arrow-icon" />
+                    <h3 id="menu1-title">Menu du Lundi 28 avril au Vendredi 2 mai</h3>
+                    <a href="menuweek.html" class="arrow-box" aria-label="Voir le menu semaine du 28 avril" aria-labelledby="menu1-title">
+                        <img src="images/arrow.png" alt="" class="arrow-icon" />
                     </a>
-                    <img src="images/Menu.jpg" alt="Image 1" />
-                    <h3>Lundi 28 avril - Vendredi 2 mai</h3>
+                    <img src="images/Menu.jpg" alt="Image du menu semaine 1" />
                 </div>
+
                 <div class="box">
-                    <a href="menuweek.html" class="arrow-box" aria-label="Voir le menu de la semaine">
-                        <img src="images/arrow.png" alt="Flèche vers menu" class="arrow-icon" />
+                    <h3 id="menu2-title">Menu du Lundi 5 mai au Vendredi 9 mai</h3>
+                    <a href="menuweek.html" class="arrow-box" aria-label="Voir le menu semaine du 5 mai" aria-labelledby="menu2-title">
+                        <img src="images/arrow.png" alt="" class="arrow-icon" />
                     </a>
-                    <img src="images/Menu.jpg" alt="Image 2" />
-                    <h3>Lundi 28 avril - Vendredi 2 mai</h3>
+                    <img src="images/Menu.jpg" alt="Image du menu semaine 2" />
                 </div>
+
                 <div class="box">
-                    <a href="menuweek.html" class="arrow-box" aria-label="Voir le menu de la semaine">
-                        <img src="images/arrow.png" alt="Flèche vers menu" class="arrow-icon" />
+                    <h3 id="menu3-title">Menu du Lundi 12 mai au Vendredi 16 mai</h3>
+                    <a href="menuweek.html" class="arrow-box" aria-label="Voir le menu semaine du 12 mai" aria-labelledby="menu3-title">
+                        <img src="images/arrow.png" alt="" class="arrow-icon" />
                     </a>
-                    <img src="images/Menu.jpg" alt="Image 3" />
-                    <h3>Lundi 28 avril - Vendredi 2 mai</h3>
+                    <img src="images/Menu.jpg" alt="Image du menu semaine 3" />
                 </div>
+
                 <div class="box">
-                    <a href="menuweek.html" class="arrow-box" aria-label="Voir le menu de la semaine">
-                        <img src="images/arrow.png" alt="Flèche vers menu" class="arrow-icon" />
+                    <h3 id="menu4-title">Menu du Lundi 19 mai au Vendredi 23 mai</h3>
+                    <a href="menuweek.html" class="arrow-box" aria-label="Voir le menu semaine du 19 mai" aria-labelledby="menu4-title">
+                        <img src="images/arrow.png" alt="" class="arrow-icon" />
                     </a>
-                    <img src="images/Menu.jpg" alt="Image 4" />
-                    <h3>Lundi 28 avril - Vendredi 2 mai</h3>
+                    <img src="images/Menu.jpg" alt="Image du menu semaine 4" />
                 </div>
+
                 <div class="box">
-                    <a href="menuweek.html" class="arrow-box" aria-label="Voir le menu de la semaine">
-                        <img src="images/arrow.png" alt="Flèche vers menu" class="arrow-icon" />
+                    <h3 id="menu5-title">Menu du Lundi 26 mai au Vendredi 30 mai</h3>
+                    <a href="menuweek.html" class="arrow-box" aria-label="Voir le menu semaine du 26 mai" aria-labelledby="menu5-title">
+                        <img src="images/arrow.png" alt="" class="arrow-icon" />
                     </a>
-                    <img src="images/Menu.jpg" alt="Image 5" />
-                    <h3>Lundi 28 avril - Vendredi 2 mai</h3>
+                    <img src="images/Menu.jpg" alt="Image du menu semaine 5" />
                 </div>
             </div>
         </div>
-    </section>
+    </main>
 
     <footer></footer>
 </body>
