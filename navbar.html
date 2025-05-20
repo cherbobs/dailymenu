@@ -6,27 +6,32 @@
       <span class="sr-only">Retour à l'accueil</span>
     </a>
     <img src="imgs/flag.png" alt="Langue : Français" class="flag" width="24" height="16">
-</div>
-
-
-  <div class="search-section">
-    <label for="search" class="sr-only">Rechercher sur le site</label>
-    <input type="search" id="search" name="search" placeholder="Rechercher..." aria-label="Champ de recherche">
-    <button aria-label="Lancer la recherche">
-      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="#000" stroke-width="2" viewBox="0 0 24 24">
-        <circle cx="11" cy="11" r="8"></circle>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-      </svg>
-    </button>
   </div>
 
-  <ul class="nav-links">
-    <li><a href="index.html" aria-current="page">Accueil</a></li>
-    <li><a href="tarifs.html">Tarifs</a></li>
-    <li><a href="menus.html">Menus</a></li>
-    <li><a href="accessibilite.html">Accessibilité</a></li>
-  </ul>
+  <!-- Container pour le menu mobile -->
+  <div class="mobile-menu-container" id="mobile-menu-container">
+    <!-- Menu principal -->
+    <ul class="nav-links">
+      <li><a href="index.html" aria-current="page">Accueil</a></li>
+      <li><a href="tarifs.html">Tarifs</a></li>
+      <li><a href="menus.html">Menus</a></li>
+      <li><a href="accessibilite.html">Accessibilité</a></li>
+    </ul>
 
+    <!-- Bouton Payer en ligne pour mobile -->
+    <div class="mobile-cta">
+      <a href="paiement.html" class="btn-pay">Payer en ligne</a>
+    </div>
+  </div>
+
+  <!-- Burger Menu -->
+  <div class="burger-menu" id="burger-menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
+
+  <!-- Appel à l'action (CTA) pour desktop -->
   <div class="cta">
     <a href="paiement.html" class="btn-pay">Payer en ligne</a>
   </div>

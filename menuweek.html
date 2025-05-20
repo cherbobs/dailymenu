@@ -6,6 +6,7 @@
   <title>Menu de la semaine</title>
   <link rel="stylesheet" href="css/menuweek.css">
   <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/global.css">
 </head>
 <body>
 <div id="navbar-container"></div>
@@ -16,134 +17,334 @@
       <a href="#">Télécharger le menu de la semaine</a>
     </div>
 
-    <section class="weekly-menu">
-
-      <div class="day">
-        <h2>Lundi 26 mai</h2>
-        <div class="meal-grid">
-          <!-- Déjeuner -->
-          <div class="meal-column">
-            <h3>Déjeuner</h3>
-            <div class="items">
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Betteraves cuites et sa vinaigrette</span><span class="subtitle">Légumes</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Lasagnes aux légumes</span><span class="subtitle">Pâtes, légumes</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Saint Paulin</span><span class="subtitle">Fromage</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Compote de pommes fraise</span><span class="subtitle">Dessert</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Pain</span><span class="subtitle">Gluten</span></div></div>
-            </div>
-          </div>
-
-          <!-- Goûter -->
-          <div class="meal-column">
-            <h3>Goûter</h3>
-            <div class="items">
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Brioche tranchée au chocolat aux noisettes</span><span class="subtitle">Viennoiserie</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Pomme rouge bio</span><span class="subtitle">Fruit</span></div></div>
-            </div>
-          </div>
+    <main>
+      <h1>Menu de la semaine</h1>
+      <h2 class="date">Lundi 26 mai</h2>
+  
+      <section class="menu-week">
+        <div class="menu-block">
+          <h3>Déjeuner</h3>
+          <ul class="menu-list">
+            <li>
+              <img src="/imgs/entrée.png" alt="" class="icon">
+              <div>
+                <strong>Betteraves cuites et sa vinaigrette balsamique</strong>
+                <p class="allergenes">SULFITES</p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/plat (1).png" alt="" class="icon">
+              <div>
+                <strong>Lasagnes aux légumes</strong>
+                <p class="allergenes">GLUTEN, LAIT (LACTOSE), MOUTARDE, ŒUF, SOJA</p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/produits laitiers.png" alt="" class="icon">
+              <div>
+                <strong>Saint Paulin</strong>
+                <p class="allergenes">LAIT (LACTOSE)</p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/dessert.png" alt="" class="icon">
+              <div>
+                <strong>Compote de pommes fraise</strong>
+                <p class="allergenes"></p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/pain.png" alt="" class="icon">
+              <div>
+                <strong>Pain</strong>
+                <p class="allergenes">GLUTEN</p>
+              </div>
+            </li>
+          </ul>
         </div>
-      </div>
-
-      <div class="day">
-        <h2>Mardi 27 mai</h2>
-        <div class="meal-grid">
-          <div class="meal-column">
-            <h3>Déjeuner</h3>
-            <div class="items">
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Betteraves cuites et sa vinaigrette</span><span class="subtitle">Légumes</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Lasagnes aux légumes</span><span class="subtitle">Pâtes, légumes</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Saint Paulin</span><span class="subtitle">Fromage</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Compote de pommes fraise</span><span class="subtitle">Dessert</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Pain</span><span class="subtitle">Gluten</span></div></div>
-            </div>
-          </div>
-
-          <div class="meal-column">
-            <h3>Goûter</h3>
-            <div class="items">
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Brioche tranchée au chocolat aux noisettes</span><span class="subtitle">Viennoiserie</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Pomme rouge bio</span><span class="subtitle">Fruit</span></div></div>
-            </div>
-          </div>
+  
+        <div class="menu-block">
+          <h3>Goûter</h3>
+          <ul class="menu-list">
+            <li>
+              <img src="/imgs//patisseries.png" alt="" class="icon">
+              <div>
+                <strong>Brioche tranchée au chocolat aux noisettes</strong>
+                <p class="allergenes">FRUITS À COQUE, GLUTEN, LAIT (LACTOSE), ŒUF</p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/fruit.png" alt="" class="icon">
+              <div>
+                <strong>Pomme rouge bio</strong>
+                <p class="allergenes"></p>
+              </div>
+            </li>
+          </ul>
         </div>
-      </div>
+      </section>
 
-      <div class="day">
-        <h2>Mercredi 28 mai</h2>
-        <div class="meal-grid">
-          <div class="meal-column">
-            <h3>Déjeuner</h3>
-            <div class="items">
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Betteraves cuites et sa vinaigrette</span><span class="subtitle">Légumes</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Lasagnes aux légumes</span><span class="subtitle">Pâtes, légumes</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Saint Paulin</span><span class="subtitle">Fromage</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Compote de pommes fraise</span><span class="subtitle">Dessert</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Pain</span><span class="subtitle">Gluten</span></div></div>
-            </div>
-          </div>
-
-          <div class="meal-column">
-            <h3>Goûter</h3>
-            <div class="items">
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Brioche tranchée au chocolat aux noisettes</span><span class="subtitle">Viennoiserie</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Pomme rouge bio</span><span class="subtitle">Fruit</span></div></div>
-            </div>
-          </div>
+      <h2 class="date">Mardi 27 mai</h2>
+  
+      <section class="menu-week">
+        <div class="menu-block">
+          <h3>Déjeuner</h3>
+          <ul class="menu-list">
+            <li>
+              <img src="/imgs/entrée.png" alt="" class="icon">
+              <div>
+                <strong>Betteraves cuites et sa vinaigrette balsamique</strong>
+                <p class="allergenes">SULFITES</p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/plat (1).png" alt="" class="icon">
+              <div>
+                <strong>Lasagnes aux légumes</strong>
+                <p class="allergenes">GLUTEN, LAIT (LACTOSE), MOUTARDE, ŒUF, SOJA</p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/produits laitiers.png" alt="" class="icon">
+              <div>
+                <strong>Saint Paulin</strong>
+                <p class="allergenes">LAIT (LACTOSE)</p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/dessert.png" alt="" class="icon">
+              <div>
+                <strong>Compote de pommes fraise</strong>
+                <p class="allergenes"></p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/pain.png" alt="" class="icon">
+              <div>
+                <strong>Pain</strong>
+                <p class="allergenes">GLUTEN</p>
+              </div>
+            </li>
+          </ul>
         </div>
-      </div>
-
-      <div class="day">
-        <h2>Jeudi 29 mai</h2>
-        <div class="meal-grid">
-          <div class="meal-column">
-            <h3>Déjeuner</h3>
-            <div class="items">
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Betteraves cuites et sa vinaigrette</span><span class="subtitle">Légumes</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Lasagnes aux légumes</span><span class="subtitle">Pâtes, légumes</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Saint Paulin</span><span class="subtitle">Fromage</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Compote de pommes fraise</span><span class="subtitle">Dessert</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Pain</span><span class="subtitle">Gluten</span></div></div>
-            </div>
-          </div>
-
-          <div class="meal-column">
-            <h3>Goûter</h3>
-            <div class="items">
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Brioche tranchée au chocolat aux noisettes</span><span class="subtitle">Viennoiserie</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Pomme rouge bio</span><span class="subtitle">Fruit</span></div></div>
-            </div>
-          </div>
+  
+        <div class="menu-block">
+          <h3>Goûter</h3>
+          <ul class="menu-list">
+            <li>
+              <img src="/imgs//patisseries.png" alt="" class="icon">
+              <div>
+                <strong>Brioche tranchée au chocolat aux noisettes</strong>
+                <p class="allergenes">FRUITS À COQUE, GLUTEN, LAIT (LACTOSE), ŒUF</p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/fruit.png" alt="" class="icon">
+              <div>
+                <strong>Pomme rouge bio</strong>
+                <p class="allergenes"></p>
+              </div>
+            </li>
+          </ul>
         </div>
-      </div>
-
-      <div class="day">
-        <h2>Vendredi 30 mai</h2>
-        <div class="meal-grid">
-          <div class="meal-column">
-            <h3>Déjeuner</h3>
-            <div class="items">
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Betteraves cuites et sa vinaigrette</span><span class="subtitle">Légumes</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Lasagnes aux légumes</span><span class="subtitle">Pâtes, légumes</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Saint Paulin</span><span class="subtitle">Fromage</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Compote de pommes fraise</span><span class="subtitle">Dessert</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Pain</span><span class="subtitle">Gluten</span></div></div>
-            </div>
-          </div>
-
-          <div class="meal-column">
-            <h3>Goûter</h3>
-            <div class="items">
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Brioche tranchée au chocolat aux noisettes</span><span class="subtitle">Viennoiserie</span></div></div>
-              <div class="item"><div class="icon"></div><div class="info"><span class="title">Pomme rouge bio</span><span class="subtitle">Fruit</span></div></div>
-            </div>
-          </div>
+      </section>
+      <h2 class="date">Mercredi 28 mai</h2>
+  
+      <section class="menu-week">
+        <div class="menu-block">
+          <h3>Déjeuner</h3>
+          <ul class="menu-list">
+            <li>
+              <img src="/imgs/entrée.png" alt="" class="icon">
+              <div>
+                <strong>Betteraves cuites et sa vinaigrette balsamique</strong>
+                <p class="allergenes">SULFITES</p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/plat (1).png" alt="" class="icon">
+              <div>
+                <strong>Lasagnes aux légumes</strong>
+                <p class="allergenes">GLUTEN, LAIT (LACTOSE), MOUTARDE, ŒUF, SOJA</p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/produits laitiers.png" alt="" class="icon">
+              <div>
+                <strong>Saint Paulin</strong>
+                <p class="allergenes">LAIT (LACTOSE)</p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/dessert.png" alt="" class="icon">
+              <div>
+                <strong>Compote de pommes fraise</strong>
+                <p class="allergenes"></p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/pain.png" alt="" class="icon">
+              <div>
+                <strong>Pain</strong>
+                <p class="allergenes">GLUTEN</p>
+              </div>
+            </li>
+          </ul>
         </div>
-      </div>
+  
+        <div class="menu-block">
+          <h3>Goûter</h3>
+          <ul class="menu-list">
+            <li>
+              <img src="/imgs//patisseries.png" alt="" class="icon">
+              <div>
+                <strong>Brioche tranchée au chocolat aux noisettes</strong>
+                <p class="allergenes">FRUITS À COQUE, GLUTEN, LAIT (LACTOSE), ŒUF</p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/fruit.png" alt="" class="icon">
+              <div>
+                <strong>Pomme rouge bio</strong>
+                <p class="allergenes"></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <h2 class="date">Jeudi 29 mai</h2>
+  
+      <section class="menu-week">
+        <div class="menu-block">
+          <h3>Déjeuner</h3>
+          <ul class="menu-list">
+            <li>
+              <img src="/imgs/entrée.png" alt="" class="icon">
+              <div>
+                <strong>Betteraves cuites et sa vinaigrette balsamique</strong>
+                <p class="allergenes">SULFITES</p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/plat (1).png" alt="" class="icon">
+              <div>
+                <strong>Lasagnes aux légumes</strong>
+                <p class="allergenes">GLUTEN, LAIT (LACTOSE), MOUTARDE, ŒUF, SOJA</p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/produits laitiers.png" alt="" class="icon">
+              <div>
+                <strong>Saint Paulin</strong>
+                <p class="allergenes">LAIT (LACTOSE)</p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/dessert.png" alt="" class="icon">
+              <div>
+                <strong>Compote de pommes fraise</strong>
+                <p class="allergenes"></p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/pain.png" alt="" class="icon">
+              <div>
+                <strong>Pain</strong>
+                <p class="allergenes">GLUTEN</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="menu-block">
+          <h3>Goûter</h3>
+          <ul class="menu-list">
+            <li>
+              <img src="/imgs//patisseries.png" alt="" class="icon">
+              <div>
+                <strong>Brioche tranchée au chocolat aux noisettes</strong>
+                <p class="allergenes">FRUITS À COQUE, GLUTEN, LAIT (LACTOSE), ŒUF</p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/fruit.png" alt="" class="icon">
+              <div>
+                <strong>Pomme rouge bio</strong>
+                <p class="allergenes"></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <h2 class="date">Vendredi 30 mai</h2>
+  
+      <section class="menu-week">
+        <div class="menu-block">
+          <h3>Déjeuner</h3>
+          <ul class="menu-list">
+            <li>
+              <img src="/imgs/entrée.png" alt="" class="icon">
+              <div>
+                <strong>Betteraves cuites et sa vinaigrette balsamique</strong>
+                <p class="allergenes">SULFITES</p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/plat (1).png" alt="" class="icon">
+              <div>
+                <strong>Lasagnes aux légumes</strong>
+                <p class="allergenes">GLUTEN, LAIT (LACTOSE), MOUTARDE, ŒUF, SOJA</p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/produits laitiers.png" alt="" class="icon">
+              <div>
+                <strong>Saint Paulin</strong>
+                <p class="allergenes">LAIT (LACTOSE)</p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/dessert.png" alt="" class="icon">
+              <div>
+                <strong>Compote de pommes fraise</strong>
+                <p class="allergenes"></p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/pain.png" alt="" class="icon">
+              <div>
+                <strong>Pain</strong>
+                <p class="allergenes">GLUTEN</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="menu-block">
+          <h3>Goûter</h3>
+          <ul class="menu-list">
+            <li>
+              <img src="/imgs//patisseries.png" alt="" class="icon">
+              <div>
+                <strong>Brioche tranchée au chocolat aux noisettes</strong>
+                <p class="allergenes">FRUITS À COQUE, GLUTEN, LAIT (LACTOSE), ŒUF</p>
+              </div>
+            </li>
+            <li>
+              <img src="/imgs/fruit.png" alt="" class="icon">
+              <div>
+                <strong>Pomme rouge bio</strong>
+                <p class="allergenes"></p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-      
-      <script src="navbar.js" defer></script>
-    </section>
+
+    </main>
   </div>
+  <script src="navbar.js" defer></script>
 </body>
 </html>
 
