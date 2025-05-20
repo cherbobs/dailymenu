@@ -2,6 +2,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 
 /* BASE GÉNÉRALE */
+html{
+  font-size: 16px;
+  margin: 0;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   color: #111;
@@ -14,13 +19,14 @@ body {
 }
 
 main {
-    display: flex;
-width: 100%;
-flex-direction: column;
-align-items: center;
-gap: 64px;
-margin: 64px 0;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  padding: 3rem;
 }
+
 a {
     text-decoration: none;
     color: #666;
@@ -84,7 +90,7 @@ a {
 
 
 #slider {
-    width: 300px;
+    width: 200px;
     height: 8px;
     margin-top: 20px;
     appearance: none;
@@ -97,8 +103,8 @@ a {
   /* Webkit (Chrome, Edge, Safari) */
   #slider::-webkit-slider-thumb {
     appearance: none;
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     background: orange;
     border-radius: 50%;
     cursor: pointer;
@@ -108,8 +114,8 @@ a {
   
   /* Firefox */
   #slider::-moz-range-thumb {
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
     background: orange;
     border-radius: 50%;
     border: none;
@@ -153,8 +159,9 @@ a {
     color: white;
     border: none;
     cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
+    font-family: var( --button-font-family);
+    font-weight: var( --button-font-weight);
+    font-size: var( --button-font-size);
     transition: background 0.3s;
   }
   
@@ -165,24 +172,19 @@ a {
   
 /* TITRES */
 h1 {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-family: var(--h1-font-family);
+  font-weight: var(--h1-font-weight);
+  font-size: var(--h1-font-size);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
-h2 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
+h3{
+  font-family: var(--h3-font-family);
+  font-weight: var(--h3-font-weight);
+  font-size: var(--h3-font-size);
 }
 
-h3 {
-  font-size: 22px;
-  font-weight: 600;
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
-}
 
 /* TEXTE SECONDAIRE */
 .small {
@@ -192,14 +194,15 @@ h3 {
 }
 
 .breadcrumb {
-  font-size: 16px;
   color: #666;
   margin-bottom: 1rem;
+  font-family: var( --texte-breadcrumb-font-family);
+  font-weight: var( --texte-breadcrumb-font-weight);
+  font-size: var( --texte-breadcrumb-font-size);
 }
 
 .intro-accessibility {
   display: flex;
-  padding: 0px 52px;
   flex-direction: column;
   align-items: flex-start;
   align-self: stretch;

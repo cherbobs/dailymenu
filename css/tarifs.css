@@ -2,6 +2,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /* BASE GÉNÉRALE */
+html{
+  font-size: 16px;
+  margin: 0;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   color: #111;
@@ -13,17 +18,22 @@ body {
   background-color: #fff;
 }
 
-a{
-  color: #000;
+main {
+  padding: 3rem;
+}
+
+a {
   text-decoration: none;
-  font-size: 0.9rem;
+  color: #666;
 }
 
 /* TITRES */
 h1 {
-  font-size: 36px;
-  font-weight: 700;
-  margin-bottom: 1rem;
+  font-family: var(--h1-font-family);
+  font-weight: var(--h1-font-weight);
+  font-size: var(--h1-font-size);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 h2 {
@@ -33,11 +43,10 @@ h2 {
   margin-bottom: 1rem;
 }
 
-h3 {
-  font-size: 22px;
-  font-weight: 600;
-  margin-top: 2rem;
-  margin-bottom: 0.75rem;
+h3{
+  font-family: var(--h3-font-family);
+  font-weight: var(--h3-font-weight);
+  font-size: var(--h3-font-size);
 }
 
 /* TEXTE SECONDAIRE */
@@ -48,17 +57,24 @@ h3 {
 }
 
 .breadcrumb {
-  font-size: 16px;
   color: #666;
   margin-bottom: 1rem;
+  font-family: var( --texte-breadcrumb-font-family);
+  font-weight: var( --texte-breadcrumb-font-weight);
+  font-size: var( --texte-breadcrumb-font-size);
+}
+
+p {
+  font-family: var( --texte-font-family);
+  font-weight: var( --texte-font-weight);
+  font-size: var( --texte-font-size);
 }
 
 /* SECTIONS TEXTE À GAUCHE */
 .intro-tarifs,
 .documents-necessaires {
-  width: 100%;
-  white-space: nowrap;
-  margin: 2rem 0 2rem 80px;
+  white-space: inherit;
+  margin: 0 3rem 80px 0;
 }
 
 .alerte {
@@ -80,6 +96,9 @@ h3 {
 
 .documents-necessaires li {
   margin-bottom: 0.5rem;
+  font-family: var( --texte-font-family);
+  font-weight: var( --texte-font-weight);
+  font-size: var( --texte-font-size);
 }
 
 /* CONTENEUR TARIFS CENTRÉ */

@@ -4,7 +4,9 @@
 
 :root {
     /* Couleurs */
-    --orange: #FF8C00;
+    --primary-color: #FF8C00;
+    --white: #fff;
+    --grey: #555;
   }
   
   /* Format desktop */
@@ -14,15 +16,12 @@
       --header-font-family: "Roboto Regular", Helvetica;
       --header-font-weight: 500;
       --header-font-size: 1rem;
-      --header-letter-spacing: 0px;
-      --header-line-height: normal;
+
   
       --button-font-family: "Roboto Medium", Helvetica;
       --button-font-weight: 600;
       --button-font-size: 20px;
-      --button-letter-spacing: 0px;
-      --button-line-height: normal;
-      --button-font-style: normal;
+
   
       --h1-font-family: "Poppins Bold", Helvetica;
       --h1-font-weight: 700;
@@ -51,12 +50,29 @@
   
       --texte-font-family: "Roboto Regular", Helvetica;
       --texte-font-weight: 400;
-      --texte-font-size: 1.5rem;
+      --texte-font-size: 1.25rem;
 
       --texte-allergenes-font-family: "Roboto Regular", Helvetica;
       --texte-allergenes-font-weight: 400;
       --texte-allergenes-font-size: 0.75rem;
+
+      --texte-breadcrumb-font-family: "Roboto Regular", Helvetica;
+      --texte-breadcrumb-font-weight: 400;
+      --texte-breadcrumb-font-size: 1.5rem;
   
+
+      /* Spacing */
+      --petalarge: 96px;
+      --teralarge: 80px;
+      --gigalarge: 64px;
+      --megalarge: 48px;
+      --kilolarge: 40px;
+      --large: 36px;
+      --centilarge: 32px;
+      --mililarge: 24px;
+      --microlarge: 16px;
+      --nanolarge: 12px;
+      --picolarge: 8px;
  
     }
   }
@@ -65,6 +81,53 @@
   
   @media only screen and (min-width: 601px) and (max-width: 1024px) {
     :root {
+            /* Polices */
+            --header-font-family: "Roboto Regular", Helvetica;
+            --header-font-weight: 500;
+            --header-font-size: 1rem;
+      
+        
+            --button-font-family: "Roboto Medium", Helvetica;
+            --button-font-weight: 600;
+            --button-font-size: 20px;
+      
+        
+            --h1-font-family: "Poppins Bold", Helvetica;
+            --h1-font-weight: 700;
+            --h1-font-size: 2.5rem;
+      
+        
+            --h2-font-family: "Poppins SemiBold", Helvetica;
+            --h2-font-weight: 600;
+            --h2-font-size: 2rem;
+      
+        
+            --h3-font-family: "Poppins SemiBold", Helvetica;
+            --h3-font-weight: 700;
+            --h3-font-size: 1.5rem;
+      
+        
+            --h4-font-family: "Roboto Medium", Helvetica;
+            --h4-font-weight: 500;
+            --h4-font-size: 1.25rem;
+      
+        
+            --h5-font-family: "Poppins Bold", Helvetica;
+            --h5-font-weight: 700;
+            --h5-font-size: 20px;
+      
+        
+            --texte-font-family: "Roboto Regular", Helvetica;
+            --texte-font-weight: 400;
+            --texte-font-size: 1.25rem;
+      
+            --texte-allergenes-font-family: "Roboto Regular", Helvetica;
+            --texte-allergenes-font-weight: 400;
+            --texte-allergenes-font-size: 0.75rem;
+      
+            --texte-breadcrumb-font-family: "Roboto Regular", Helvetica;
+            --texte-breadcrumb-font-weight: 400;
+            --texte-breadcrumb-font-size: 1.5rem;
      
       /* Spacing */
       --petalarge: 72px;
@@ -88,7 +151,52 @@
   @media only screen and (max-width: 600px) {
     :root {
       /* Polices */
+        --header-font-family: "Roboto Regular", Helvetica;
+        --header-font-weight: 500;
+        --header-font-size: 1rem;
   
+    
+        --button-font-family: "Roboto Medium", Helvetica;
+        --button-font-weight: 600;
+        --button-font-size: 20px;
+  
+    
+        --h1-font-family: "Poppins Bold", Helvetica;
+        --h1-font-weight: 700;
+        --h1-font-size: 2.5rem;
+  
+    
+        --h2-font-family: "Poppins SemiBold", Helvetica;
+        --h2-font-weight: 600;
+        --h2-font-size: 2rem;
+  
+    
+        --h3-font-family: "Poppins SemiBold", Helvetica;
+        --h3-font-weight: 700;
+        --h3-font-size: 1.5rem;
+  
+    
+        --h4-font-family: "Roboto Medium", Helvetica;
+        --h4-font-weight: 500;
+        --h4-font-size: 1.25rem;
+  
+    
+        --h5-font-family: "Poppins Bold", Helvetica;
+        --h5-font-weight: 700;
+        --h5-font-size: 20px;
+  
+    
+        --texte-font-family: "Roboto Regular", Helvetica;
+        --texte-font-weight: 400;
+        --texte-font-size: 1.25rem;
+  
+        --texte-allergenes-font-family: "Roboto Regular", Helvetica;
+        --texte-allergenes-font-weight: 400;
+        --texte-allergenes-font-size: 0.75rem;
+  
+        --texte-breadcrumb-font-family: "Roboto Regular", Helvetica;
+        --texte-breadcrumb-font-weight: 400;
+        --texte-breadcrumb-font-size: 1.5rem;
 
   
       /* Spacing */
