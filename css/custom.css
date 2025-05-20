@@ -228,16 +228,18 @@ body {
     transition: background-color 0.3s ease;
 }
 
-a{
-    text-decoration: none;
-}
-
-.arrow-box span {
-    color: white;
-    font-size: 18px;
-    font-weight: bold;
-}
-
 .arrow-box:hover {
     background-color: #e67e00;
+}
+
+/* Suppression de la flèche en span */
+.arrow-box span {
+    display: none;
+}
+
+/* Nouvelle règle pour l'image */
+.arrow-box img.arrow-icon {
+    padding-top: 10px;
+    width: 16px;
+    height: 18px;
 }
