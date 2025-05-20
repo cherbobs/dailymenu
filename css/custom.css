@@ -1,112 +1,22 @@
-.corps {
-    max-width: 95%;
-
-    margin: 0 auto;
-    padding: 0 15px;
-    box-sizing: border-box;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1rem 2rem;
-    background-color: #fff;
-    border-bottom: 3px solid #f7931e;
-    font-family: 'Arial', sans-serif;
-}
-
-.logo-link {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-}
-
-.brand-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #f7931e;
-    margin-left: 0.5rem;
-}
-
-.logo-section {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.logo {
-    height: 40px;
-}
-
-.flag {
-    margin-left: 0.5rem;
-}
-
-.search-section {
-    position: relative;
-    flex: 1;
-    max-width: 400px;
-    margin: 0 2rem;
-}
-
-.search-section input[type="search"] {
-    width: 100%;
-    padding: 0.6rem 2.5rem 0.6rem 1rem;
-    border: 1px solid #dcdde1;
-    border-radius: 20px;
-    font-size: 1rem;
-    outline: none;
-}
-
-.search-section button {
-    position: absolute;
-    top: 50%;
-    right: 0.8rem;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    line-height: 0;
-}
-
-.search-section button svg {
-    width: 20px;
-    height: 20px;
-    stroke: #000;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #000;
-    font-weight: 500;
-    position: relative;
-}
-
-.nav-links a[aria-current="page"]::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: #f7931e;
-}
-
-/* Reset utile */
+/* === RESET GÉNÉRAL === */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+/* === STRUCTURE GÉNÉRALE === */
+.corps {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* === NAVBAR === */
 .navbar {
     display: flex;
     align-items: center;
@@ -114,13 +24,22 @@
     padding: 1rem 2rem;
     background-color: #fff;
     border-bottom: 3px solid #f7931e;
-    font-family: 'Arial', sans-serif;
+}
+
+.logo-section {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .logo-link {
     display: flex;
     align-items: center;
     text-decoration: none;
+}
+
+.logo {
+    height: 40px;
 }
 
 .brand-name {
@@ -130,20 +49,11 @@
     margin-left: 0.5rem;
 }
 
-.logo-section {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.logo {
-    height: 40px;
-}
-
 .flag {
     margin-left: 0.5rem;
 }
 
+/* === BARRE DE RECHERCHE === */
 .search-section {
     position: relative;
     flex: 1;
@@ -178,6 +88,7 @@
     stroke: #000;
 }
 
+/* === LIENS DE NAVIGATION === */
 .nav-links {
     list-style: none;
     display: flex;
@@ -201,6 +112,7 @@
     background: #f7931e;
 }
 
+/* === BOUTON PAYER === */
 .cta .btn-pay {
     background-color: #f7931e;
     color: #fff;
@@ -215,7 +127,7 @@
     background-color: #e67e00;
 }
 
-/* Accessibilité supplémentaire */
+/* === ACCESSIBILITÉ === */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -228,10 +140,10 @@
     border: 0;
 }
 
-
+/* === SOUS-TITRES === */
 .subtitles-links {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     gap: 40px;
     margin: 20px 0 10px 0;
 }
@@ -243,34 +155,46 @@
     font-size: 12px;
 }
 
+/* === TITRE PRINCIPAL === */
 .main-title {
-    text-align: center;
+    text-align: start;
     font-size: 2rem;
     margin-bottom: 30px;
     font-weight: 700;
 }
 
+/* === CONTENEUR DES BOX === */
 .box-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 80%;
+    gap: 15px;
     margin: 0 auto 40px auto;
+    padding: 0 15px;
+    align-items: center;
+    justify-items: center;
 }
 
+.box-container>.box:nth-child(5) {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+/* === BOX INDIVIDUELLE === */
 .box {
-    width: 180px;
+    position: relative;
+    width: 350px;
     text-align: center;
-    border: 1px solid #ddd;
-    padding: 0 0 15px 0;
+    border: 3px solid orange;
+    padding: 0 0 15px 0px;
     border-radius: 8px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+    background: white;
 }
 
 .box img {
     width: 100%;
-    height: 100px;
+    height: 150px;
     object-fit: cover;
     border-radius: 4px;
     margin-bottom: 10px;
@@ -288,41 +212,28 @@
     color: #666;
 }
 
-.main-title {
-    text-align: start;
-    font-size: 2rem;
-    margin-bottom: 30px;
-    font-weight: 700;
-}
-
-.subtitles-links {
+/* === FLECHE === */
+.arrow-box {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    width: 32px;
+    height: 32px;
+    background-color: #f7931e;
+    border-radius: 6px;
     display: flex;
-    justify-content: start;
-    gap: 40px;
-    margin: 20px 0 10px 0;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-
-
-/* 3 premières boxes à 30% de largeur (3 dans une ligne) */
-.box-container>.box:nth-child(-n+3) {
-    flex: 0 0 30%;
+.arrow-box span {
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
 }
 
-/* boxes 4 et 5 à 45% de largeur (2 dans la ligne du bas) */
-.box-container>.box:nth-child(n+4) {
-    flex: 0 0 30%;
-}
-
-/* optionnel: margin-bottom pour espacer lignes */
-
-.box {
-    flex: 0 0 400px;
-    /* même largeur pour toutes */
-    text-align: center;
-    border: 1px solid #ddd;
-    padding: 0 0 15px 0;
-    border-radius: 8px;
-    border: 1px solid orange;
-    margin-bottom: 20px;
+.arrow-box:hover {
+    background-color: #e67e00;
 }
