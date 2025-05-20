@@ -1,104 +1,46 @@
-/* IMPORT POLICE POPPINS */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-/* BASE GÉNÉRALE */
-html{
-  font-size: 16px;
-  margin: 0;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  color: #111;
-  margin: 0;
-  padding: 0;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5;
-  background-color: #fff;
-}
-
-main {
-  padding: 3rem;
-}
-
-a {
-  text-decoration: none;
-  color: #666;
-}
-
-/* TITRES */
-h1 {
-  font-family: var(--h1-font-family);
-  font-weight: var(--h1-font-weight);
-  font-size: var(--h1-font-size);
-  margin-bottom: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-h2 {
-  font-size: 28px;
-  font-weight: 700;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-}
-
-h3{
-  font-family: var(--h3-font-family);
-  font-weight: var(--h3-font-weight);
-  font-size: var(--h3-font-size);
-}
-
-/* TEXTE SECONDAIRE */
-.small {
-  font-size: 14px;
-  font-weight: 400;
-  color: #666;
-}
-
-.breadcrumb {
-  color: #666;
-  margin-bottom: 1rem;
-  font-family: var( --texte-breadcrumb-font-family);
-  font-weight: var( --texte-breadcrumb-font-weight);
-  font-size: var( --texte-breadcrumb-font-size);
+.fil-ariane {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
 }
 
 p {
-  font-family: var( --texte-font-family);
-  font-weight: var( --texte-font-weight);
-  font-size: var( --texte-font-size);
+  font-family: var(--texte-font-family);
+  font-weight: var(--texte-font-weight);
+  font-size: var(--texte-font-size);
 }
 
 /* SECTIONS TEXTE À GAUCHE */
 .intro-tarifs,
 .documents-necessaires {
   white-space: inherit;
-  margin: 0 3rem 80px 0;
+  margin: 0 var(--megalarge) var(--teralarge) 0;
 }
 
 .alerte {
-  background-color: #fff3cd;
-  border-left: 5px solid #f0ad4e;
-  padding: 1rem;
-  margin-top: 1.5rem;
+  font-family: var(--texte-font-family);
+  font-weight: var(--texte-font-weight);
+  font-size: var(--texte-font-size);
+  background-color: var(--light-primary-color);
+  border-left: 5px solid var(--dark-primary-color);
+  padding: var(--microlarge);
+  margin-top: var(--mililarge);
   border-radius: 5px;
-  font-size: 16px;
-  max-width : 1700px;
   margin-right: auto;
 }
 
 /* LISTE DES DOCUMENTS */
 .documents-necessaires ul {
-  padding-left: 1.5rem;
-  margin-top: 1rem;
+  padding-left: var(--mililarge);
+  margin-top: var(--microlarge);
 }
 
 .documents-necessaires li {
-  margin-bottom: 0.5rem;
-  font-family: var( --texte-font-family);
-  font-weight: var( --texte-font-weight);
-  font-size: var( --texte-font-size);
+  margin-bottom: var(--picolarge);
+  font-family: var(--texte-font-family);
+  font-weight: var(--texte-font-weight);
+  font-size: var(--texte-font-size);
 }
 
 /* CONTENEUR TARIFS CENTRÉ */
@@ -113,63 +55,18 @@ p {
   height: auto;
   display: block;
   margin: 0 auto;
-  border-radius: 12px;
+  border-radius: var(--nanolarge);
+}
+
+.tarif-row {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--nanolarge);
 }
 
 
-/* ================== RESPONSIVE ================== */
-@media (max-width: 1024px) {
-  .tarif-row {
-    gap: 100px;
-  }
-
-  .info-box {
-    width: 100%;
-    padding: 0 30px;
-  }
+.tarifs-container {
+  padding: var(--microlarge);
 }
 
-@media (max-width: 768px) {
-  .tarif-row {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
 
-  .tranche-num {
-    width: 80px;
-    height: 40px;
-    font-size: 16px;
-  }
-
-  .info-box {
-    width: 100%;
-    padding: 0 20px;
-    font-size: 16px;
-  }
-
-  .tarifs-container {
-    padding: 1rem;
-  }
-
-  h1 {
-    font-size: 28px;
-  }
-
-  h2 {
-    font-size: 24px;
-  }
-
-  .breadcrumb {
-    font-size: 14px;
-  }
-
-  .intro-tarifs,
-  .documents-necessaires {
-    margin: 2rem 1rem;
-  }
-
-  .documents-necessaires li {
-    font-size: 14px;
-  }
-}
