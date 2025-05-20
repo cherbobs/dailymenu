@@ -1,17 +1,20 @@
 document.addEventListener("DOMContentLoaded", () => {
   // Charger dynamiquement la navbar
   fetch("navbar.html")
-    .then(response => response.text())
-    .then(data => {
+    .then((response) => response.text())
+    .then((data) => {
       document.getElementById("navbar-container").innerHTML = data;
 
       // Après insertion du HTML → activer le lien de la page courante
       const currentPage = window.location.pathname.split("/").pop();
       const navLinks = document.querySelectorAll(".nav-links a");
 
-      navLinks.forEach(link => {
+      navLinks.forEach((link) => {
         const linkPage = link.getAttribute("href");
-        if (linkPage === currentPage || (currentPage === "" && linkPage === "index.html")) {
+        if (
+          linkPage === currentPage ||
+          (currentPage === "" && linkPage === "index.html")
+        ) {
           link.setAttribute("aria-current", "page");
         } else {
           link.removeAttribute("aria-current");
@@ -20,8 +23,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Ajout de la logique du burger menu
       const burgerMenu = document.getElementById("burger-menu");
-      const mobileMenuContainer = document.getElementById("mobile-menu-container");
-      
+      const mobileMenuContainer = document.getElementById(
+        "mobile-menu-container"
+      );
+
       // S'assurer que les éléments existent
       if (burgerMenu && mobileMenuContainer) {
         burgerMenu.addEventListener("click", () => {
@@ -29,10 +34,10 @@ document.addEventListener("DOMContentLoaded", () => {
           mobileMenuContainer.classList.toggle("active");
           burgerMenu.classList.toggle("active");
         });
-        
+
         // Fermer le menu si on clique sur un lien
         const mobileLinks = mobileMenuContainer.querySelectorAll("a");
-        mobileLinks.forEach(link => {
+        mobileLinks.forEach((link) => {
           link.addEventListener("click", () => {
             mobileMenuContainer.classList.remove("active");
             burgerMenu.classList.remove("active");
@@ -42,15 +47,10 @@ document.addEventListener("DOMContentLoaded", () => {
         console.error("Éléments du menu mobile non trouvés");
       }
     })
-    .catch(error => {
+    .catch((error) => {
       console.error("Erreur lors du chargement de la navbar :", error);
     });
 });
-
-
-
-
-
 
 /* const toggle1 = document.getElementById("toggleBtn1");
 const status1 = document.getElementById("status1");
@@ -64,25 +64,19 @@ toggle1.addEventListener("click", () => {
     status1.textContent = "État : OFF";
   }
 }); */
-
 const toggle2 = document.getElementById("toggleBtn2");
-const status2 = document.getElementById("status2");
 const root = document.documentElement;
 
 function setDyslexicMode(enabled) {
   if (enabled) {
     root.classList.add("dyslexic-mode");
-    if (toggle2 && status2) {
-      toggle2.classList.add("active");
-      toggle2.setAttribute("aria-checked", "true");
-    }
+    toggle2.classList.add("active");
+    toggle2.setAttribute("aria-checked", "true");
     localStorage.setItem("dyslexic", "true");
   } else {
     root.classList.remove("dyslexic-mode");
-    if (toggle2 && status2) {
-      toggle2.classList.remove("active");
-      toggle2.setAttribute("aria-checked", "false");
-    }
+    toggle2.classList.remove("active");
+    toggle2.setAttribute("aria-checked", "false");
     localStorage.setItem("dyslexic", "false");
   }
 }
@@ -91,14 +85,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedMode = localStorage.getItem("dyslexic") === "true";
   setDyslexicMode(savedMode);
 
-  if (toggle2) {
-    toggle2.addEventListener("click", () => {
-      const isActive = toggle2.classList.contains("active");
-      setDyslexicMode(!isActive);
-    });
-  }
+  toggle2.addEventListener("click", () => {
+    const isActive = toggle2.classList.contains("active");
+    setDyslexicMode(!isActive);
+  });
 });
-
 
 const slider = document.getElementById("slider");
 const text = document.getElementById("text");
