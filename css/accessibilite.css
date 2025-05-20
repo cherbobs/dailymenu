@@ -57,6 +57,8 @@ a {
   width: 60px;
   height: 30px;
   background-color: #ccc;
+  border: none;
+  outline: none;
   border-radius: 30px;
   position: relative;
   cursor: pointer;
