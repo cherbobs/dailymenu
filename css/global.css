@@ -1,218 +1,211 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
 
 :root {
-    /* Couleurs */
-    --primary-color: #FF8C00;
-    --white: #fff;
-    --grey: #555;
+  /* Couleurs */
+  --primary-color: #ff8c00;
+  --dark-primary-color: #e67e00;
+  --white: #fff;
+  --grey: #555;
+  --black: #000;
+}
+
+/* Format desktop */
+@media only screen and (min-width: 1025px) {
+  :root {
+    /* Polices */
+    --header-font-family: "Roboto Regular", Helvetica;
+    --header-font-weight: 500;
+    --header-font-size: 1rem;
+
+    --button-font-family: "Roboto Medium", Helvetica;
+    --button-font-weight: 600;
+    --button-font-size: 20px;
+
+    --h1-font-family: "Poppins Bold", Helvetica;
+    --h1-font-weight: 700;
+    --h1-font-size: 2.5rem;
+
+    --h2-font-family: "Poppins SemiBold", Helvetica;
+    --h2-font-weight: 600;
+    --h2-font-size: 2rem;
+
+    --h3-font-family: "Poppins SemiBold", Helvetica;
+    --h3-font-weight: 700;
+    --h3-font-size: 1.5rem;
+
+    --h4-font-family: "Roboto Medium", Helvetica;
+    --h4-font-weight: 500;
+    --h4-font-size: 1.25rem;
+
+    --h5-font-family: "Poppins Bold", Helvetica;
+    --h5-font-weight: 700;
+    --h5-font-size: 20px;
+
+    --texte-font-family: "Roboto Regular", Helvetica;
+    --texte-font-weight: 400;
+    --texte-font-size: 1.25rem;
+
+    --texte-allergenes-font-family: "Roboto Regular", Helvetica;
+    --texte-allergenes-font-weight: 400;
+    --texte-allergenes-font-size: 0.75rem;
+
+    --texte-breadcrumb-font-family: "Roboto Regular", Helvetica;
+    --texte-breadcrumb-font-weight: 400;
+    --texte-breadcrumb-font-size: 1.5rem;
+
+    --texte-clear-parameters-font-family: "Poppins Medium", Helvetica;
+    --texte-clear-parameters-font-weight: 500;
+    --texte-clear-parameters-font-size: 1.5rem;
+
+    /* Spacing */
+    --petalarge: 96px;
+    --teralarge: 80px;
+    --gigalarge: 64px;
+    --megalarge: 3rem;
+    --kilolarge: 40px;
+    --large: 36px;
+    --centilarge: 32px;
+    --mililarge: 24px;
+    --microlarge: 16px;
+    --nanolarge: 12px;
+    --picolarge: 8px;
   }
-  
-  /* Format desktop */
-  @media only screen and (min-width: 1025px) {
-    :root {
-      /* Polices */
-      --header-font-family: "Roboto Regular", Helvetica;
-      --header-font-weight: 500;
-      --header-font-size: 1rem;
+}
 
-  
-      --button-font-family: "Roboto Medium", Helvetica;
-      --button-font-weight: 600;
-      --button-font-size: 20px;
+/* Format tablet */
 
-  
-      --h1-font-family: "Poppins Bold", Helvetica;
-      --h1-font-weight: 700;
-      --h1-font-size: 2.5rem;
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  :root {
+    /* Polices */
+    --header-font-family: "Roboto Regular", Helvetica;
+    --header-font-weight: 500;
+    --header-font-size: 1rem;
 
-  
-      --h2-font-family: "Poppins SemiBold", Helvetica;
-      --h2-font-weight: 600;
-      --h2-font-size: 2rem;
+    --button-font-family: "Roboto Medium", Helvetica;
+    --button-font-weight: 600;
+    --button-font-size: 20px;
 
-  
-      --h3-font-family: "Poppins SemiBold", Helvetica;
-      --h3-font-weight: 700;
-      --h3-font-size: 1.5rem;
+    --h1-font-family: "Poppins Bold", Helvetica;
+    --h1-font-weight: 700;
+    --h1-font-size: 2.5rem;
 
-  
-      --h4-font-family: "Roboto Medium", Helvetica;
-      --h4-font-weight: 500;
-      --h4-font-size: 1.25rem;
+    --h2-font-family: "Poppins SemiBold", Helvetica;
+    --h2-font-weight: 600;
+    --h2-font-size: 2rem;
 
-  
-      --h5-font-family: "Poppins Bold", Helvetica;
-      --h5-font-weight: 700;
-      --h5-font-size: 20px;
+    --h3-font-family: "Poppins SemiBold", Helvetica;
+    --h3-font-weight: 700;
+    --h3-font-size: 1.5rem;
 
-  
-      --texte-font-family: "Roboto Regular", Helvetica;
-      --texte-font-weight: 400;
-      --texte-font-size: 1.25rem;
+    --h4-font-family: "Roboto Medium", Helvetica;
+    --h4-font-weight: 500;
+    --h4-font-size: 1.25rem;
 
-      --texte-allergenes-font-family: "Roboto Regular", Helvetica;
-      --texte-allergenes-font-weight: 400;
-      --texte-allergenes-font-size: 0.75rem;
+    --h5-font-family: "Poppins Bold", Helvetica;
+    --h5-font-weight: 700;
+    --h5-font-size: 20px;
 
-      --texte-breadcrumb-font-family: "Roboto Regular", Helvetica;
-      --texte-breadcrumb-font-weight: 400;
-      --texte-breadcrumb-font-size: 1.5rem;
-  
+    --texte-font-family: "Roboto Regular", Helvetica;
+    --texte-font-weight: 400;
+    --texte-font-size: 1.25rem;
 
-      /* Spacing */
-      --petalarge: 96px;
-      --teralarge: 80px;
-      --gigalarge: 64px;
-      --megalarge: 48px;
-      --kilolarge: 40px;
-      --large: 36px;
-      --centilarge: 32px;
-      --mililarge: 24px;
-      --microlarge: 16px;
-      --nanolarge: 12px;
-      --picolarge: 8px;
- 
-    }
+    --texte-allergenes-font-family: "Roboto Regular", Helvetica;
+    --texte-allergenes-font-weight: 400;
+    --texte-allergenes-font-size: 0.75rem;
+
+    --texte-breadcrumb-font-family: "Roboto Regular", Helvetica;
+    --texte-breadcrumb-font-weight: 400;
+    --texte-breadcrumb-font-size: 1.5rem;
+
+    --texte-clear-parameters-font-family: "Poppins Medium", Helvetica;
+    --texte-clear-parameters-font-weight: 500;
+    --texte-clear-parameters-font-size: 1.5rem;
+
+    /* Spacing */
+    --petalarge: 72px;
+    --teralarge: 64px;
+    --gigalarge: 52px;
+    --megalarge: 40px;
+    --kilolarge: 36px;
+    --large: 32px;
+    --centilarge: 24px;
+    --mililarge: 20px;
+    --microlarge: 16px;
+    --nanolarge: 12px;
+    --picolarge: 8px;
+
+    /* Sprites */
   }
-  
-  /* Format tablet */
-  
-  @media only screen and (min-width: 601px) and (max-width: 1024px) {
-    :root {
-            /* Polices */
-            --header-font-family: "Roboto Regular", Helvetica;
-            --header-font-weight: 500;
-            --header-font-size: 1rem;
-      
-        
-            --button-font-family: "Roboto Medium", Helvetica;
-            --button-font-weight: 600;
-            --button-font-size: 20px;
-      
-        
-            --h1-font-family: "Poppins Bold", Helvetica;
-            --h1-font-weight: 700;
-            --h1-font-size: 2.5rem;
-      
-        
-            --h2-font-family: "Poppins SemiBold", Helvetica;
-            --h2-font-weight: 600;
-            --h2-font-size: 2rem;
-      
-        
-            --h3-font-family: "Poppins SemiBold", Helvetica;
-            --h3-font-weight: 700;
-            --h3-font-size: 1.5rem;
-      
-        
-            --h4-font-family: "Roboto Medium", Helvetica;
-            --h4-font-weight: 500;
-            --h4-font-size: 1.25rem;
-      
-        
-            --h5-font-family: "Poppins Bold", Helvetica;
-            --h5-font-weight: 700;
-            --h5-font-size: 20px;
-      
-        
-            --texte-font-family: "Roboto Regular", Helvetica;
-            --texte-font-weight: 400;
-            --texte-font-size: 1.25rem;
-      
-            --texte-allergenes-font-family: "Roboto Regular", Helvetica;
-            --texte-allergenes-font-weight: 400;
-            --texte-allergenes-font-size: 0.75rem;
-      
-            --texte-breadcrumb-font-family: "Roboto Regular", Helvetica;
-            --texte-breadcrumb-font-weight: 400;
-            --texte-breadcrumb-font-size: 1.5rem;
-     
-      /* Spacing */
-      --petalarge: 72px;
-      --teralarge: 64px;
-      --gigalarge: 52px;
-      --megalarge: 40px;
-      --kilolarge: 36px;
-      --large: 32px;
-      --centilarge: 24px;
-      --mililarge: 20px;
-      --microlarge: 16px;
-      --nanolarge: 12px;
-      --picolarge: 8px;
-  
-      /* Sprites */
-    }
-  }
-  
-  /* Format mobile */
-  
-  @media only screen and (max-width: 600px) {
-    :root {
-      /* Polices */
-        --header-font-family: "Roboto Regular", Helvetica;
-        --header-font-weight: 500;
-        --header-font-size: 1rem;
-  
-    
-        --button-font-family: "Roboto Medium", Helvetica;
-        --button-font-weight: 600;
-        --button-font-size: 20px;
-  
-    
-        --h1-font-family: "Poppins Bold", Helvetica;
-        --h1-font-weight: 700;
-        --h1-font-size: 2.5rem;
-  
-    
-        --h2-font-family: "Poppins SemiBold", Helvetica;
-        --h2-font-weight: 600;
-        --h2-font-size: 2rem;
-  
-    
-        --h3-font-family: "Poppins SemiBold", Helvetica;
-        --h3-font-weight: 700;
-        --h3-font-size: 1.5rem;
-  
-    
-        --h4-font-family: "Roboto Medium", Helvetica;
-        --h4-font-weight: 500;
-        --h4-font-size: 1.25rem;
-  
-    
-        --h5-font-family: "Poppins Bold", Helvetica;
-        --h5-font-weight: 700;
-        --h5-font-size: 20px;
-  
-    
-        --texte-font-family: "Roboto Regular", Helvetica;
-        --texte-font-weight: 400;
-        --texte-font-size: 1.25rem;
-  
-        --texte-allergenes-font-family: "Roboto Regular", Helvetica;
-        --texte-allergenes-font-weight: 400;
-        --texte-allergenes-font-size: 0.75rem;
-  
-        --texte-breadcrumb-font-family: "Roboto Regular", Helvetica;
-        --texte-breadcrumb-font-weight: 400;
-        --texte-breadcrumb-font-size: 1.5rem;
+}
 
-  
-      /* Spacing */
-      --petalarge: 64px;
-      --teralarge: 52px;
-      --gigalarge: 44px;
-      --megalarge: 36px;
-      --kilolarge: 32px;
-      --large: 24px;
-      --centilarge: 20px;
-      --mililarge: 16px;
-      --microlarge: 12px;
-      --nanolarge: 8px;
-      --picolarge: 8px;
-  
-      /* Sprites */
+/* Format mobile */
 
-    }
+@media only screen and (max-width: 600px) {
+  :root {
+    /* Polices */
+    --header-font-family: "Roboto Regular", Helvetica;
+    --header-font-weight: 500;
+    --header-font-size: 1rem;
+
+    --button-font-family: "Roboto Medium", Helvetica;
+    --button-font-weight: 600;
+    --button-font-size: 20px;
+
+    --h1-font-family: "Poppins Bold", Helvetica;
+    --h1-font-weight: 700;
+    --h1-font-size: 2.5rem;
+
+    --h2-font-family: "Poppins SemiBold", Helvetica;
+    --h2-font-weight: 600;
+    --h2-font-size: 2rem;
+
+    --h3-font-family: "Poppins SemiBold", Helvetica;
+    --h3-font-weight: 700;
+    --h3-font-size: 1.5rem;
+
+    --h4-font-family: "Roboto Medium", Helvetica;
+    --h4-font-weight: 500;
+    --h4-font-size: 1.25rem;
+
+    --h5-font-family: "Poppins Bold", Helvetica;
+    --h5-font-weight: 700;
+    --h5-font-size: 20px;
+
+    --texte-font-family: "Roboto Regular", Helvetica;
+    --texte-font-weight: 400;
+    --texte-font-size: 1.25rem;
+
+    --texte-allergenes-font-family: "Roboto Regular", Helvetica;
+    --texte-allergenes-font-weight: 400;
+    --texte-allergenes-font-size: 0.75rem;
+
+    --texte-breadcrumb-font-family: "Roboto Regular", Helvetica;
+    --texte-breadcrumb-font-weight: 400;
+    --texte-breadcrumb-font-size: 1.5rem;
+
+    --texte-clear-parameters-font-family: "Poppins Medium", Helvetica;
+    --texte-clear-parameters-font-weight: 500;
+    --texte-clear-parameters-font-size: 1.5rem;
+
+    /* Spacing */
+    --petalarge: 64px;
+    --teralarge: 52px;
+    --gigalarge: 44px;
+    --megalarge: 36px;
+    --kilolarge: 32px;
+    --large: 24px;
+    --centilarge: 20px;
+    --mililarge: 16px;
+    --microlarge: 12px;
+    --nanolarge: 8px;
+    --picolarge: 8px;
+
+    /* Sprites */
   }
+}
+
+html {
+  font-size: 16px;
+  margin: 0;
+}

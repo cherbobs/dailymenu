@@ -1,62 +1,42 @@
-/* IMPORT POLICE POPPINS */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
 /* BASE GÉNÉRALE */
-html{
-  font-size: 16px;
-  margin: 0;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  color: #111;
-  margin: 0;
-  padding: 0;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.5;
-  background-color: #fff;
-}
 
 main {
   display: flex;
   width: 100%;
   flex-direction: column;
   align-items: center;
-  gap: 3rem;
-  padding: 3rem;
+  gap: var(--megalarge);
+  padding: var(--megalarge);
 }
 
 a {
-    text-decoration: none;
-    color: #666;
-  }
-
-
+  text-decoration: none;
+  color: var(--grey);
+}
 
 .accessibility-choice-save-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 72px;
-    margin: 0 52px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--teralarge);
+  margin: 0 var(--megalarge);
 }
 
 .accessibility-choice-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
-    gap: 64px 112px; /* 64px vertical, 112px horizontal */
-    align-items: start; /* aligne les éléments en haut de chaque cellule */
-    width: 100%;
-  }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes égales */
+  gap: var(--gigalarge) var(--petalarge); /* 64px vertical, 112px horizontal */
+  align-items: start; /* aligne les éléments en haut de chaque cellule */
+  width: 100%;
+}
 
 .mode-container {
-    display: flex;
-    width: 256px;
-    height: 110px;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
+  display: flex;
+  width: 256px;
+  height: 110px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 
 .toggle-switch {
@@ -81,95 +61,90 @@ a {
 }
 
 .toggle-switch.active {
-  background-color: #FF8C00;
+  background-color: #ff8c00;
 }
 
 .toggle-switch.active .toggle-circle {
   left: 32px;
 }
 
-
 #slider {
-    width: 200px;
-    height: 8px;
-    margin-top: 20px;
-    appearance: none;
-    background: linear-gradient(to right, orange 50%, #ccc 50%);
-    border-radius: 999px;
-    outline: none;
-    cursor: pointer;
-  }
-  
-  /* Webkit (Chrome, Edge, Safari) */
-  #slider::-webkit-slider-thumb {
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    background: orange;
-    border-radius: 50%;
-    cursor: pointer;
-    border: none;
-    margin-top: 0px;
-  }
-  
-  /* Firefox */
-  #slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: orange;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-  }
-  
-  /* Firefox track reset */
-  #slider::-moz-range-track {
-    background: transparent;
-  }
-  
-  /* Texte */
-  #text {
-    margin-top: 40px;
-    font-size: 16px;
-  }
-
-.clear-container {
-    color: #000;
-    font-family: Poppins;
-    font-size: 20px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: normal;
-    text-decoration-line: underline;
-    text-decoration-style: dotted;
-    text-decoration-skip-ink: auto;
-    text-decoration-thickness: auto;
-    text-underline-offset: auto;
-    text-underline-position: from-font;
+  width: 200px;
+  height: 8px;
+  margin-top: 20px;
+  appearance: none;
+  background: linear-gradient(to right, orange 50%, #ccc 50%);
+  border-radius: 999px;
+  outline: none;
+  cursor: pointer;
 }
 
+/* Webkit (Chrome, Edge, Safari) */
+#slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: orange;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  margin-top: 0px;
+}
+
+/* Firefox */
+#slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: orange;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+/* Firefox track reset */
+#slider::-moz-range-track {
+  background: transparent;
+}
+
+/* Texte */
+#text {
+  margin-top: var(--kilolarge);
+  font-size: var(--microlarge);
+}
+
+.clear-container {
+  color: var(--black);
+  font-family: var(--texte-clear-parameters-font-family);
+  font-weight: var(--texte-clear-parameters-font-weight);
+  font-size: var(--texte-clear-parameters-font-size);
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
 
 .custom-button {
-    display: flex;
-    padding: 8px 40px;
-    justify-content: center;
-    align-items: center;
-    border-radius: 30px;
-    background: #FF8C00;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-family: var( --button-font-family);
-    font-weight: var( --button-font-weight);
-    font-size: var( --button-font-size);
-    transition: background 0.3s;
-  }
-  
-  .custom-button:hover {
-    background: #e67e00; /* assombri au survol */
-  }
+  display: flex;
+  padding: var(--picolarge) var(--kilolarge);
+  justify-content: center;
+  align-items: center;
+  border-radius: 100px;
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  font-family: var(--button-font-family);
+  font-weight: var(--button-font-weight);
+  font-size: var(--button-font-size);
+  transition: background 0.3s;
+}
 
-  
+.custom-button:hover {
+  background: var(--dark-primary-color); /* assombri au survol */
+}
+
 /* TITRES */
 h1 {
   font-family: var(--h1-font-family);
@@ -179,26 +154,20 @@ h1 {
   padding-bottom: 0.5rem;
 }
 
-h3{
+h3 {
   font-family: var(--h3-font-family);
   font-weight: var(--h3-font-weight);
   font-size: var(--h3-font-size);
 }
 
-
 /* TEXTE SECONDAIRE */
-.small {
-  font-size: 14px;
-  font-weight: 400;
-  color: #666;
-}
 
 .breadcrumb {
-  color: #666;
-  margin-bottom: 1rem;
-  font-family: var( --texte-breadcrumb-font-family);
-  font-weight: var( --texte-breadcrumb-font-weight);
-  font-size: var( --texte-breadcrumb-font-size);
+  color: var(--grey);
+  margin-bottom: var(--mililarge);
+  font-family: var(--texte-breadcrumb-font-family);
+  font-weight: var(--texte-breadcrumb-font-weight);
+  font-size: var(--texte-breadcrumb-font-size);
 }
 
 .intro-accessibility {
