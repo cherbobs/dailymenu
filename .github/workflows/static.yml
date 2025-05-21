@@ -2,15 +2,14 @@ name: Déploiement site statique
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Cloner le dépôt
+      - name: Cloner le dépôt
         uses: actions/checkout@v3
 
       - name: Installer tdewolff/minify
@@ -19,16 +18,18 @@ jobs:
           tar -xzf minify.tar.gz
           sudo mv minify /usr/local/bin/
 
-      - name: 🧹 Créer le dossier de production
-        run: mkdir dist
-
       - name: Minifier HTML, CSS, JS
         run: |
           mkdir -p dist/images
-          minify -o dist/index.html src/index.html
-          minify -o dist/style.css src/style.css
-          minify -o dist/script.js src/script.js
-          cp -r src/images/* dist/images/ || echo "Pas d'images à copier"
+          minify -o dist/index.html index.html
+          minify -o dist/accessibilite.html accessibilite.html
+          minify -o dist/menuweek.html menuweek.html
+          minify -o dist/navbar.html navbar.html
+          minify -o dist/tarifs.html tarifs.html
+          cat css/*.css > dist/style.concat.css
+          minify -o dist/style.css dist/style.concat.css
+          minify -o dist/script.js script.js
+          cp -r images/* dist/images/ || echo "Pas d'images à copier"
 
       - name: Déploiement GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
