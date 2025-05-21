@@ -5,9 +5,9 @@ const status1 = document.getElementById('status1');
 toggle1.addEventListener('click', () => {
   toggle1.classList.toggle('active');
   const isActive = toggle1.classList.contains('active');
-  status1.textContent = isActive ? 'État : ON' : 'État : OFF';
-  localStorage.setItem('modeContraste', isActive ? 'on' : 'off');
+  status1.textContent = `État : ${isActive ? 'ON' : 'OFF'}`;
   document.body.classList.toggle('contraste', isActive);
+  localStorage.setItem('modeContraste', isActive ? 'on' : 'off');
 });
 
 // ========== DYSLEXIQUE ==========
@@ -17,62 +17,71 @@ const status2 = document.getElementById('status2');
 toggle2.addEventListener('click', () => {
   toggle2.classList.toggle('active');
   const isActive = toggle2.classList.contains('active');
-  status2.textContent = isActive ? 'État : ON' : 'État : OFF';
+  status2.textContent = `État : ${isActive ? 'ON' : 'OFF'}`;
+  document.body.classList.toggle('dyslexique', isActive);
   localStorage.setItem('modeDyslexique', isActive ? 'on' : 'off');
-  document.body.classList.toggle('dyslexie', isActive);
 });
 
-// ========== SLIDER TAILLE DU TEXTE ==========
+// ========== TAILLE DU TEXTE ==========
 const slider = document.getElementById('slider');
 const valueDisplay = document.getElementById('value');
-const saveBtn = document.querySelector('.custom-button');
+const textDemo = document.getElementById('text');
 
-// Met à jour l’apparence du slider
+function applyGlobalFontSize(size) {
+  document.documentElement.style.fontSize = `${size}px`;
+  localStorage.setItem('fontSize', size);
+}
+
+// Met à jour la couleur de fond du slider
 function updateSliderBackground(value) {
-  const min = slider.min;
-  const max = slider.max;
-  const percent = ((value - min) / (max - min)) * 100;
+  const percent = ((value - slider.min) / (slider.max - slider.min)) * 100;
   slider.style.background = `linear-gradient(to right, orange ${percent}%, #ccc ${percent}%)`;
 }
 
-// Appliquer la taille à <html>
-function applyGlobalFontSize(size) {
-  document.documentElement.style.fontSize = `${size}px`;
-}
+// Appliquer les préférences enregistrées au chargement
+window.addEventListener('DOMContentLoaded', () => {
+  const savedSize = localStorage.getItem('fontSize') || 16;
+  const contraste = localStorage.getItem('modeContraste');
+  const dyslexique = localStorage.getItem('modeDyslexique');
 
-// Charger les préférences existantes
-document.addEventListener('DOMContentLoaded', () => {
-  const savedSize = localStorage.getItem('fontSize');
-  const sizeToApply = savedSize || 16;
+  slider.value = savedSize;
+  valueDisplay.textContent = `${savedSize} px`;
+  updateSliderBackground(savedSize);
+  applyGlobalFontSize(savedSize);
+  textDemo.style.fontSize = `${savedSize}px`;
 
-  slider.value = sizeToApply;
-  valueDisplay.textContent = `${sizeToApply} px`;
-  applyGlobalFontSize(sizeToApply);
-  updateSliderBackground(sizeToApply);
-
-  if (localStorage.getItem('modeContraste') === 'on') {
+  if (contraste === 'on') {
     toggle1.classList.add('active');
     status1.textContent = 'État : ON';
     document.body.classList.add('contraste');
   }
 
-  if (localStorage.getItem('modeDyslexique') === 'on') {
+  if (dyslexique === 'on') {
     toggle2.classList.add('active');
     status2.textContent = 'État : ON';
-    document.body.classList.add('dyslexie');
+    document.body.classList.add('dyslexique');
   }
 });
 
-// Changement visuel en direct
+// Debounce pour éviter les ralentissements
+let debounceTimer;
+
 slider.addEventListener('input', () => {
   const size = slider.value;
   valueDisplay.textContent = `${size} px`;
-  applyGlobalFontSize(size);
   updateSliderBackground(size);
+  textDemo.style.fontSize = `${size}px`;
+
+  clearTimeout(debounceTimer);
+  debounceTimer = setTimeout(() => {
+    applyGlobalFontSize(size);
+  }, 300);
 });
 
-// Sauvegarde au clic
-saveBtn.addEventListener('click', () => {
-  localStorage.setItem('fontSize', slider.value);
-  alert('Taille du texte enregistrée.');
+// ========== RÉINITIALISATION ==========
+document.querySelector('.clear-container')?.addEventListener('click', () => {
+  localStorage.removeItem('fontSize');
+  localStorage.removeItem('modeContraste');
+  localStorage.removeItem('modeDyslexique');
+  location.reload();
 });
