@@ -1,0 +1,37 @@
+name: Déploiement site statique
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Cloner le dépôt
+        uses: actions/checkout@v3
+
+      - name: Installer tdewolff/minify
+        run: |
+          curl -L https://github.com/tdewolff/minify/releases/latest/download/minify_linux_amd64.tar.gz -o minify.tar.gz
+          tar -xzf minify.tar.gz
+          sudo mv minify /usr/local/bin/
+
+      - name: 🧹 Créer le dossier de production
+        run: mkdir dist
+
+      - name: Minifier HTML, CSS, JS
+        run: |
+          mkdir -p dist/images
+          minify -o dist/index.html src/index.html
+          minify -o dist/style.css src/style.css
+          minify -o dist/script.js src/script.js
+          cp -r src/images/* dist/images/ || echo "Pas d'images à copier"
+
+      - name: Déploiement GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
