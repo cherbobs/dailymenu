@@ -1,0 +1,73 @@
+
+
+
+.date {
+  color: var(--primary-color);
+}
+
+.menu-date-section {
+  display: flex;
+  padding: 0px var(--teralarge);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--megalarge);
+  align-self: stretch;
+}
+
+.menu-section{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: var(--petalarge);
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+.menu-block {
+  flex: 1 1 45%;
+}
+
+.menu-block h3{
+  padding: var(--mililarge) 0;
+}
+
+
+.menu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--microlarge);
+}
+
+.menu-list li {
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--picolarge);
+  padding: var(--nanolarge);
+  background: var(--white);
+  gap: var(--microlarge);
+}
+
+.menu-list img.icon {
+  width: var(--kilolarge);
+  height: var(--kilolarge);
+  object-fit: contain;
+}
+
+.allergenes {
+  color: var(--grey);
+  margin-top: var(--picolarge);
+  font-family: var( --texte-allergenes-font-family);
+  font-weight: var( --texte-allergenes-font-weight);
+  font-size: var( --texte-allergenes-font-size);
+}
+
+footer {
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: var(--microlarge);
+  color: var(--white);
+  margin-top: var(--megalarge);
+}

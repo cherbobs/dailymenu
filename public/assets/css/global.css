@@ -1,0 +1,308 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap");
+@font-face {
+  font-family: "OpenDyslexic Bold";
+  src: url("../fonts/OpenDyslexic-Bold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  display: swap;
+}
+
+@font-face {
+  font-family: "OpenDyslexic Regular";
+  src: url("../fonts/OpenDyslexic-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+  display: swap;
+}
+
+:root {
+  /* Couleurs */
+  --primary-color: #ff8c00;
+  --dark-primary-color: #e67e00;
+  --light-primary-color: #fff3cd;
+  --white: #fff;
+  --grey: #555;
+  --black: #000;
+}
+
+/* Format desktop */
+@media only screen and (min-width: 1025px) {
+  :root {
+    /* Polices */
+    --header-font-family: "Roboto Regular", Helvetica;
+    --header-font-weight: 500;
+    --header-font-size: 1rem;
+
+    --button-font-family: "Roboto Medium", Helvetica;
+    --button-font-weight: 600;
+    --button-font-size: 1.25rem;
+
+    --h1-font-family: "Poppins Bold", Helvetica;
+    --h1-font-weight: 700;
+    --h1-font-size: 2.5rem;
+
+    --h2-font-family: "Poppins SemiBold", Helvetica;
+    --h2-font-weight: 600;
+    --h2-font-size: 2rem;
+
+    --h3-font-family: "Poppins SemiBold", Helvetica;
+    --h3-font-weight: 700;
+    --h3-font-size: 1.5rem;
+
+    --h4-font-family: "Roboto Medium", Helvetica;
+    --h4-font-weight: 500;
+    --h4-font-size: 1.25rem;
+
+    --h5-font-family: "Poppins Bold", Helvetica;
+    --h5-font-weight: 700;
+    --h5-font-size: 1.25rem;
+
+    --texte-font-family: "Roboto Regular", Helvetica;
+    --texte-font-weight: 400;
+    --texte-font-size: 1.25rem;
+
+    --texte-allergenes-font-family: "Roboto Regular", Helvetica;
+    --texte-allergenes-font-weight: 400;
+    --texte-allergenes-font-size: 0.75rem;
+
+    --texte-breadcrumb-font-family: "Roboto Regular", Helvetica;
+    --texte-breadcrumb-font-weight: 400;
+    --texte-breadcrumb-font-size: 1.5rem;
+
+    --texte-clear-parameters-font-family: "Poppins Medium", Helvetica;
+    --texte-clear-parameters-font-weight: 500;
+    --texte-clear-parameters-font-size: 1.5rem;
+
+    --texte-alertes-font-family: "Roboto Regular", Helvetica;
+    --texte-alertes-font-weight: 400;
+    --texte-alertes-font-size: 1rem;
+
+    /* Spacing */
+    --petalarge: 6rem;
+    --teralarge: 5rem;
+    --gigalarge: 4rem;
+    --megalarge: 3rem;
+    --kilolarge: 2.5rem;
+    --large: 2.25rem;
+    --centilarge: 2rem;
+    --mililarge: 1.5rem;
+    --microlarge: 1rem;
+    --nanolarge: 0.75rem;
+    --picolarge: 0.5rem;
+  }
+}
+
+/* Format tablet */
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+  :root {
+    /* Polices */
+    --header-font-family: "Roboto Regular", Helvetica;
+    --header-font-weight: 500;
+    --header-font-size: 1rem;
+
+    --button-font-family: "Roboto Medium", Helvetica;
+    --button-font-weight: 600;
+    --button-font-size: 1.25rem;
+
+    --h1-font-family: "Poppins Bold", Helvetica;
+    --h1-font-weight: 700;
+    --h1-font-size: 2.5rem;
+
+    --h2-font-family: "Poppins SemiBold", Helvetica;
+    --h2-font-weight: 600;
+    --h2-font-size: 2rem;
+
+    --h3-font-family: "Poppins SemiBold", Helvetica;
+    --h3-font-weight: 700;
+    --h3-font-size: 1.5rem;
+
+    --h4-font-family: "Roboto Medium", Helvetica;
+    --h4-font-weight: 500;
+    --h4-font-size: 1.25rem;
+
+    --h5-font-family: "Poppins Bold", Helvetica;
+    --h5-font-weight: 700;
+    --h5-font-size: 20px;
+
+    --texte-font-family: "Roboto Regular", Helvetica;
+    --texte-font-weight: 400;
+    --texte-font-size: 1.25rem;
+
+    --texte-allergenes-font-family: "Roboto Regular", Helvetica;
+    --texte-allergenes-font-weight: 400;
+    --texte-allergenes-font-size: 0.75rem;
+
+    --texte-breadcrumb-font-family: "Roboto Regular", Helvetica;
+    --texte-breadcrumb-font-weight: 400;
+    --texte-breadcrumb-font-size: 1.5rem;
+
+    --texte-clear-parameters-font-family: "Poppins Medium", Helvetica;
+    --texte-clear-parameters-font-weight: 500;
+    --texte-clear-parameters-font-size: 1.5rem;
+  
+    --texte-alertes-font-family: "Roboto Regular", Helvetica;
+    --texte-alertes-font-weight: 400;
+    --texte-alertes-font-size: 1rem;
+
+    /* Spacing */
+    --petalarge: 4.5rem;
+    --teralarge: 4rem;
+    --gigalarge: 3.25rem;
+    --megalarge: 2.5rem;
+    --kilolarge: 2.25rem;
+    --large: 2rem;
+    --centilarge: 1.5rem;
+    --mililarge: 1.25rem;
+    --microlarge: 1rem;
+    --nanolarge: 0.75rem;
+    --picolarge: 0.5rem;
+
+    /* Sprites */
+  }
+}
+
+/* Format mobile */
+
+@media only screen and (max-width: 600px) {
+  :root {
+    /* Polices */
+    --header-font-family: "Roboto Regular", Helvetica;
+    --header-font-weight: 500;
+    --header-font-size: 1rem;
+
+    --button-font-family: "Roboto Medium", Helvetica;
+    --button-font-weight: 600;
+    --button-font-size: 1.25rem;
+
+    --h1-font-family: "Poppins Bold", Helvetica;
+    --h1-font-weight: 700;
+    --h1-font-size: 2.5rem;
+
+    --h2-font-family: "Poppins SemiBold", Helvetica;
+    --h2-font-weight: 600;
+    --h2-font-size: 2rem;
+
+    --h3-font-family: "Poppins SemiBold", Helvetica;
+    --h3-font-weight: 700;
+    --h3-font-size: 1.5rem;
+
+    --h4-font-family: "Roboto Medium", Helvetica;
+    --h4-font-weight: 500;
+    --h4-font-size: 1.25rem;
+
+    --h5-font-family: "Poppins Bold", Helvetica;
+    --h5-font-weight: 700;
+    --h5-font-size: 1.25rem;
+
+    --texte-font-family: "Roboto Regular", Helvetica;
+    --texte-font-weight: 400;
+    --texte-font-size: 1.25rem;
+
+    --texte-allergenes-font-family: "Roboto Regular", Helvetica;
+    --texte-allergenes-font-weight: 400;
+    --texte-allergenes-font-size: 0.75rem;
+
+    --texte-breadcrumb-font-family: "Roboto Regular", Helvetica;
+    --texte-breadcrumb-font-weight: 400;
+    --texte-breadcrumb-font-size: 1.5rem;
+
+    --texte-clear-parameters-font-family: "Poppins Medium", Helvetica;
+    --texte-clear-parameters-font-weight: 500;
+    --texte-clear-parameters-font-size: 1.5rem;
+
+    --texte-alertes-font-family: "Roboto Regular", Helvetica;
+    --texte-alertes-font-weight: 400;
+    --texte-alertes-font-size: 1rem;
+
+    /* Spacing */
+    --petalarge: 4rem;
+    --teralarge: 3.25rem;
+    --gigalarge: 2.75rem;
+    --megalarge: 2.25rem;
+    --kilolarge: 2rem;
+    --large: 1.5rem;
+    --centilarge: 1.25rem;
+    --mililarge: 1rem;
+    --microlarge: 0.75rem;
+    --nanolarge: 0.5rem;
+    --picolarge: 0.5rem;
+
+    /* Sprites */
+  }
+}
+
+/* BASE GÉNÉRALE */
+html {
+  font-size: 16px;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--megalarge);
+  padding: var(--megalarge);
+}
+
+a {
+  text-decoration: none;
+  color: var(--grey);
+}
+
+.breadcrumb {
+  color: var(--grey);
+  margin-bottom: var(--mililarge);
+  font-family: var(--texte-breadcrumb-font-family);
+  font-weight: var(--texte-breadcrumb-font-weight);
+  font-size: var(--texte-breadcrumb-font-size);
+}
+
+/* Polices */
+h1 {
+  font-family: var(--h1-font-family);
+  font-weight: var(--h1-font-weight);
+  font-size: var(--h1-font-size);
+  margin-bottom: var(--large);
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--h2-font-family);
+  font-weight: var(--h2-font-weight);
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-family: var(--h3-font-family);
+  font-weight: var(--h3-font-weight);
+  font-size: var(--h3-font-size);
+}
+
+h4 {
+  font-family: var(--h4-font-family);
+  font-weight: var(--h4-font-weight);
+  font-size: var(--h4-font-size);
+}
+
+
+
+.dyslexic-mode {
+  --header-font-family: "OpenDyslexic Regular", sans-serif;
+  --button-font-family: "OpenDyslexic Regular", sans-serif;
+  --h1-font-family: "OpenDyslexic Bold", sans-serif;
+  --h2-font-family: "OpenDyslexic Bold", sans-serif;
+  --h3-font-family: "OpenDyslexic Bold", sans-serif;
+  --h4-font-family: "OpenDyslexic Regular", sans-serif;
+  --h5-font-family: "OpenDyslexic Bold", sans-serif;
+  --texte-font-family: "OpenDyslexic Regular", sans-serif;
+  --texte-allergenes-font-family: "OpenDyslexic Regular", sans-serif;
+  --texte-breadcrumb-font-family: "OpenDyslexic Regular", sans-serif;
+  --texte-clear-parameters-font-family: "OpenDyslexic Regular", sans-serif;
+  --texte-alertes-font-family: "OpenDyslexic Regular", sans-serif;
+}

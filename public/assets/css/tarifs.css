@@ -1,0 +1,72 @@
+.fil-ariane {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+p {
+  font-family: var(--texte-font-family);
+  font-weight: var(--texte-font-weight);
+  font-size: var(--texte-font-size);
+}
+
+/* SECTIONS TEXTE À GAUCHE */
+.intro-tarifs,
+.documents-necessaires {
+  white-space: inherit;
+  margin: 0 var(--megalarge) var(--teralarge) 0;
+}
+
+.alerte {
+  font-family: var(--texte-font-family);
+  font-weight: var(--texte-font-weight);
+  font-size: var(--texte-font-size);
+  background-color: var(--light-primary-color);
+  border-left: 5px solid var(--dark-primary-color);
+  padding: var(--microlarge);
+  margin-top: var(--mililarge);
+  border-radius: 5px;
+  margin-right: auto;
+}
+
+/* LISTE DES DOCUMENTS */
+.documents-necessaires ul {
+  padding-left: var(--mililarge);
+  margin-top: var(--microlarge);
+}
+
+.documents-necessaires li {
+  margin-bottom: var(--picolarge);
+  font-family: var(--texte-font-family);
+  font-weight: var(--texte-font-weight);
+  font-size: var(--texte-font-size);
+}
+
+/* CONTENEUR TARIFS CENTRÉ */
+.tarifs-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.image-tarifs {
+  width: 50%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: var(--nanolarge);
+}
+
+.tarif-row {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--nanolarge);
+}
+
+
+.tarifs-container {
+  padding: var(--microlarge);
+}
+
+
