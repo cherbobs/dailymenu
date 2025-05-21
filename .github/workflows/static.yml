@@ -19,19 +19,20 @@ jobs:
           sudo mv minify /usr/local/bin/
 
       - name: Minifier HTML, CSS, JS
+        working-directory: ./dailymenu
         run: |
-          mkdir -p dist/images
-          minify -o dist/index.html index.html
-          minify -o dist/accessibilite.html accessibilite.html
-          minify -o dist/menuweek.html menuweek.html
-          minify -o dist/navbar.html navbar.html
-          minify -o dist/tarifs.html tarifs.html
-          cat css/*.css > dist/style.concat.css
-          minify -o dist/style.css dist/style.concat.css
-          minify -o dist/script.js script.js
-          cp -r images/* dist/images/ || echo "Pas d'images à copier"
+          mkdir -p ../dist/images
+          minify -o ../dist/index.html index.html
+          minify -o ../dist/accessibilite.html accessibilite.html
+          minify -o ../dist/menuweek.html menuweek.html
+          minify -o ../dist/navbar.html navbar.html
+          minify -o ../dist/tarifs.html tarifs.html
+          cat css/*.css > ../dist/style.concat.css
+          minify -o ../dist/style.css ../dist/style.concat.css
+          minify -o ../dist/script.js script.js
+          cp -r images/* ../dist/images/ || echo "Pas d'images à copier"
 
-      - name: Déploiement GitHub Pages
+      - name: Déployer sur GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
