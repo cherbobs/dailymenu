@@ -1,95 +1,70 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu</title>
-    <link rel="stylesheet" href="./assets/css/navbar.css" />
-    <link rel="stylesheet" href="./assets/css/navbar.css" />
-    <link rel="stylesheet" href="./assets/css/menus.css" />
-  </head>
+    <link rel="stylesheet" href="./assets/css/global.css" />
 
-  <body>
+</head>
+
+<body>
     <div id="navbar-container"></div>
+
     <main id="main-content">
-      <div class="corps">
-        <div class="subtitles-links">
-          <a href="#link1">Page d'accueil</a>
-          <a href="#link2">Menus</a>
+        <section class="intro">
+        <p class="breadcrumb">
+          <a href="index.html">Page d’accueil</a> > Menus
+        </p>
+        <h1>Menus</h1>
+      </section>
+
+            <div class="box-container">
+                <div class="box">
+                    <a href="menuweek.html" class="arrow-box" aria-label="Voir le menu semaine du 28 avril" aria-labelledby="menu1-title">
+                        <img src="./assets/images/arrow.png" alt="" class="arrow-icon" />
+                    </a>
+                    <img src="./assets/images/Menu.jpg" alt="Image du menu semaine 1" />
+                    <h6>Menu du Lundi 28 avril au Vendredi 2 mai</h6>
+                </div>
+
+                <div class="box">
+                    <a href="menuweek.html" class="arrow-box" aria-label="Voir le menu semaine du 5 mai" aria-labelledby="menu2-title">
+                        <img src="./assets/images/arrow.png" alt="" class="arrow-icon" />
+                    </a>
+                    <img src="./assets/images/Menu.jpg" alt="Image du menu semaine 2" />
+                    <h6 i>Menu du Lundi 5 mai au Vendredi 9 mai</h6>
+                </div>
+
+                <div class="box">
+                    <a href="menuweek.html" class="arrow-box" aria-label="Voir le menu semaine du 12 mai" aria-labelledby="menu3-title">
+                        <img src="./assets/images/arrow.png" alt="" class="arrow-icon" />
+                    </a>
+                    <img src="./assets/images/Menu.jpg" alt="Image du menu semaine 3" />
+                    <h6 >Menu du Lundi 12 mai au Vendredi 16 mai</h6>
+                </div>
+
+                <div class="box">
+                    <a href="menuweek.html" class="arrow-box" aria-label="Voir le menu semaine du 19 mai" aria-labelledby="menu4-title">
+                        <img src="./assets/images/arrow.png" alt="" class="arrow-icon" />
+                    </a>
+                    <img src="./assets/images/Menu.jpg" alt="Image du menu semaine 4" />
+                    <h6>Menu du Lundi 19 mai au Vendredi 23 mai</h6>
+                </div>
+
+                <div class="box">
+                    <a href="menuweek.html" class="arrow-box" aria-label="Voir le menu semaine du 26 mai" aria-labelledby="menu5-title">
+                        <img src="./assets/images/arrow.png" alt="" class="arrow-icon" />
+                    </a>
+                    <img src="./assets/images/Menu.jpg" alt="Image du menu semaine 5" />
+                    <h6 >Menu du Lundi 26 mai au Vendredi 30 mai</h6>
+                </div>
+            </div>
         </div>
-
-        <h2 class="main-title">Menus</h2>
-
-        <div class="box-container">
-          <div class="box">
-            <h3 id="menu1-title">Menu du Lundi 28 avril au Vendredi 2 mai</h3>
-            <a
-              href="menuweek.html"
-              class="arrow-box"
-              aria-label="Voir le menu semaine du 28 avril"
-              aria-labelledby="menu1-title"
-            >
-              <img src="./assets/images/arrow.png" alt="" class="arrow-icon" />
-            </a>
-            <img src="./assets/images/Menu.jpg" alt="Image du menu semaine 1" />
-          </div>
-
-          <div class="box">
-            <h3 id="menu2-title">Menu du Lundi 5 mai au Vendredi 9 mai</h3>
-            <a
-              href="menuweek.html"
-              class="arrow-box"
-              aria-label="Voir le menu semaine du 5 mai"
-              aria-labelledby="menu2-title"
-            >
-              <img src="./assets/images/arrow.png" alt="" class="arrow-icon" />
-            </a>
-            <img src="./assets/images/Menu.jpg" alt="Image du menu semaine 2" />
-          </div>
-
-          <div class="box">
-            <h3 id="menu3-title">Menu du Lundi 12 mai au Vendredi 16 mai</h3>
-            <a
-              href="menuweek.html"
-              class="arrow-box"
-              aria-label="Voir le menu semaine du 12 mai"
-              aria-labelledby="menu3-title"
-            >
-              <img src="./assets/images/arrow.png" alt="" class="arrow-icon" />
-            </a>
-            <img src="./assets/images/Menu.jpg" alt="Image du menu semaine 3" />
-          </div>
-
-          <div class="box">
-            <h3 id="menu4-title">Menu du Lundi 19 mai au Vendredi 23 mai</h3>
-            <a
-              href="menuweek.html"
-              class="arrow-box"
-              aria-label="Voir le menu semaine du 19 mai"
-              aria-labelledby="menu4-title"
-            >
-              <img src="./assets/images/arrow.png" alt="" class="arrow-icon" />
-            </a>
-            <img src="./assets/images/Menu.jpg" alt="Image du menu semaine 4" />
-          </div>
-
-          <div class="box">
-            <h3 id="menu5-title">Menu du Lundi 26 mai au Vendredi 30 mai</h3>
-            <a
-              href="menuweek.html"
-              class="arrow-box"
-              aria-label="Voir le menu semaine du 26 mai"
-              aria-labelledby="menu5-title"
-            >
-              <img src="./assets/images/arrow.png" alt="" class="arrow-icon" />
-            </a>
-            <img src="./assets/images/Menu.jpg" alt="Image du menu semaine 5" />
-          </div>
-        </div>
-      </div>
     </main>
-    <!-- Script pour charger dynamiquement la navbar -->
-    <script src="./assets/js/script.js"></script>
+     <script src="./assets/js/script.js" defer></script>
     <footer></footer>
-  </body>
+</body>
+
 </html>
