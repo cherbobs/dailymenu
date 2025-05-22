@@ -32,8 +32,8 @@ jobs:
           done
 
           # Minification CSS
-          cat public/assets/css/*.css > dist/assets/css/index.concat.css
-          minify -o dist/assets/css/index.css dist/assets/css/index.concat.css
+          cat public/assets/css/*.css > dist/assets/css/global.concat.css
+          minify -o dist/assets/css/global.css dist/assets/css/global.concat.css
 
           # Minification JS
           minify -o dist/assets/js/script.js public/assets/js/script.js
