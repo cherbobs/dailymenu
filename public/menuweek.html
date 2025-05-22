@@ -4,15 +4,23 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Menu de la semaine</title>
+    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/global.css" />
   </head>
   <body>
     <div id="navbar-container"></div>
     <main>
+      <!-- SECTION INTRO -->
       <section class="intro">
-        <p class="breadcrumb">
-          <a href="index.html">Page d’accueil</a> > Menu de la semaine
-        </p>
+        <nav aria-label="Fil d’Ariane">
+          <ol class="breadcrumb">
+            <li>
+              <a href="index.html">Page d'accueil</a>
+              <span class="separator" aria-hidden="true">›</span>
+            </li>
+            <li aria-current="page">Menu de la semaine</li>
+          </ol>
+        </nav>
         <h1>Menu de la semaine</h1>
         <a href="#" id="download-menu">Télécharger le menu de la semaine</a>
       </section>

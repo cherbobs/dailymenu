@@ -510,11 +510,26 @@ a {
 }
 
 .breadcrumb {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem; /* espace entre éléments */
   color: var(--grey);
   margin-bottom: var(--mililarge);
   font-family: var(--texte-breadcrumb-font-family);
   font-weight: var(--texte-breadcrumb-font-weight);
   font-size: var(--texte-breadcrumb-font-size);
+  padding: 0;
+  margin: 0 0 var(--mililarge) 0;
+}
+
+.breadcrumb li {
+  display: flex;
+  align-items: center;
+}
+
+.separator {
+  margin: 0 0.5rem;
 }
 
 #download-menu {

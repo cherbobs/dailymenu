@@ -35,9 +35,15 @@
     <main>
       <!-- SECTION INTRO -->
       <section class="intro">
-        <p class="breadcrumb">
-          <a href="index.html">Page d’accueil</a> > Accessibilité
-        </p>
+        <nav aria-label="Fil d’Ariane">
+          <ol class="breadcrumb">
+            <li>
+              <a href="index.html">Page d’accueil</a>
+              <span class="separator" aria-hidden="true">›</span>
+            </li>
+            <li aria-current="page">Accessibilité</li>
+          </ol>
+        </nav>
         <h1>Accessibilité</h1>
       </section>
 
@@ -66,12 +72,10 @@
               type="range"
               id="slider"
               min="10"
-              max="50"
+              max="32"
               value="16"
               aria-describedby="value"
             />
-            <p id="value">16 px</p>
-            <div id="text">Ce texte change de taille !</div>
           </div>
 
           <!-- Mode dyslexique -->
@@ -91,9 +95,6 @@
           <!-- Réinitialiser -->
           <p class="clear-container">Réinitialiser les paramètres</p>
         </div>
-
-        <!-- Enregistrer -->
-        <button class="custom-button">Enregistrer</button>
       </section>
     </main>
   </body>
