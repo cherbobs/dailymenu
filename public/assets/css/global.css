@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: "OpenDyslexic Bold";
   src: url("../fonts/OpenDyslexic-Bold.otf") format("opentype");
@@ -252,7 +251,6 @@ h1 {
   font-family: var(--h1-font-family);
   font-weight: var(--h1-font-weight);
   font-size: var(--h1-font-size);
-
 }
 
 h2 {
@@ -296,7 +294,7 @@ p {
   font-size: var(--texte-font-size);
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -321,7 +319,6 @@ a {
 
 /* === NAVBAR === */
 
-
 .navbar {
   display: flex;
   align-items: center;
@@ -329,7 +326,7 @@ a {
   padding: 1rem 2rem;
   background-color: #fff;
   border-bottom: 3px solid #f7931e;
-  font-family: 'Arial', sans-serif;
+  font-family: "Arial", sans-serif;
   font-size: 1rem;
 }
 
@@ -396,8 +393,6 @@ a {
   image-rendering: auto; /* ou crisp-edges si pixel art */
 }
 
-
-
 .nav-links {
   list-style: none;
   display: flex;
@@ -412,7 +407,7 @@ a {
 }
 
 .nav-links a[aria-current="page"]::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -6px;
   left: 0;
