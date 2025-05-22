@@ -22,7 +22,6 @@
         rel="stylesheet"
       />
     </noscript>
-    <link rel="icon" href="./favicon.ico" type="image/x-icon" />
 
     <!-- CSS principal : chargement non bloquant -->
     <link rel="stylesheet" href="./assets/css/global.css" />
@@ -36,9 +35,15 @@
     <main>
       <!-- SECTION INTRO -->
       <section class="intro">
-        <p class="breadcrumb">
-          <a href="index.html">Page d’accueil</a> > Accessibilité
-        </p>
+        <nav aria-label="Fil d’Ariane">
+          <ol class="breadcrumb">
+            <li>
+              <a href="index.html">Page d’accueil</a>
+              <span class="separator" aria-hidden="true">›</span>
+            </li>
+            <li aria-current="page">Accessibilité</li>
+          </ol>
+        </nav>
         <h1>Accessibilité</h1>
       </section>
 
