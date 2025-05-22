@@ -429,7 +429,7 @@ a {
   background-color: var(--primary-color);
   color: var(--white);
   padding: 0.6rem 1.2rem;
-  border-radius: 20px;
+  border-radius: 200px;
   text-decoration: none;
   font-weight: bold;
   transition: background 0.3s ease;
@@ -796,6 +796,7 @@ h2.date {
 }
 
 .clear-container {
+  cursor: pointer;
   color: var(--black);
   font-family: var(--texte-clear-parameters-font-family);
   font-weight: var(--texte-clear-parameters-font-weight);

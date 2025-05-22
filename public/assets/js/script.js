@@ -133,4 +133,33 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 300);
     });
   }
+
+  // ========== RÉINITIALISATION ==========
+  const resetBtn = document.getElementById("resetBtn");
+
+  resetBtn?.addEventListener("click", () => {
+    // Supprimer les classes de mode
+    root.classList.remove("dyslexic-mode", "high-contrast-mode");
+
+    // Réinitialiser font-size
+    root.style.fontSize = "16px";
+
+    // Réinitialiser les switches visuellement
+    toggle1?.classList.remove("active");
+    toggle1?.setAttribute("aria-checked", "false");
+
+    toggle2?.classList.remove("active");
+    toggle2?.setAttribute("aria-checked", "false");
+
+    // Réinitialiser le slider
+    if (slider) {
+      slider.value = 16;
+      updateSliderBackground(16);
+    }
+
+    // Nettoyer le localStorage
+    localStorage.removeItem("dyslexic");
+    localStorage.removeItem("contrast");
+    localStorage.removeItem("fontSize");
+  });
 });
