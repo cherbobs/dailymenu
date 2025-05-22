@@ -3,19 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Accessibilité | DailyMenu</title>
+    <title>Daily Menu</title>
 
-    <!-- Styles -->
-    <link rel="stylesheet" href="./assets/css/navbar.css" />
-    <link rel="stylesheet" href="./assets/css/accessibilite.css" />
+    <!-- Préconnexion à Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- Google Fonts : Poppins + Roboto -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <!-- CSS principal : chargement non bloquant -->
     <link rel="stylesheet" href="./assets/css/global.css" />
+
+    <!-- Script principal JS : chargement différé -->
+    <script src="./assets/js/script.js" defer></script>
   </head>
   <body>
     <div id="navbar-container"></div>
 
     <main>
       <!-- SECTION INTRO -->
-      <section class="intro-accessibility">
+      <section class="intro">
         <p class="breadcrumb">
           <a href="index.html">Page d’accueil</a> > Accessibilité
         </p>
@@ -77,8 +96,5 @@
         <button class="custom-button">Enregistrer</button>
       </section>
     </main>
-
-    <!-- Scripts -->
-    <script src="./assets/js/script.js"></script>
   </body>
 </html>
