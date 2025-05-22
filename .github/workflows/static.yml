@@ -18,30 +18,7 @@ jobs:
           tar -xzf minify.tar.gz
           sudo mv minify /usr/local/bin/
 
-      - name: Minifier le site
-        run: |
-          mkdir -p dist/assets/css
-          mkdir -p dist/assets/js
-          mkdir -p dist/assets/images
-          mkdir -p dist/assets/fonts
-
-          # Minification des pages HTML
-          for file in public/*.html; do
-            filename=$(basename "$file")
-            minify -o dist/"$filename" "$file"
-          done
-
-          # Minification CSS
-          cat public/assets/css/*.css > dist/assets/css/style.concat.css
-          minify -o dist/assets/css/style.css dist/assets/css/style.concat.css
-
-          # Minification JS
-          minify -o dist/assets/js/script.js public/assets/js/script.js
-
-          # Copier images et polices
-          cp -r public/assets/images/* dist/assets/images/ || echo "Pas d'images"
-          cp -r public/assets/fonts/* dist/assets/fonts/ || echo "Pas de polices"
-
+     
       - name: Déployer sur GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
