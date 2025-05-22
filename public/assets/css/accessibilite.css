@@ -149,7 +149,7 @@ h3 {
 /* TEXTE SECONDAIRE */
 
 
-.intro-accessibility {
+.intro {
   display: flex;
   flex-direction: column;
   align-items: flex-start;

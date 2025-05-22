@@ -1,68 +1,4 @@
-/* Global */
-body {
-  font-family: "Inter", sans-serif;
-  margin: 0;
-  background-color: #fff;
-  color: #000;
-}
 
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 2rem;
-}
-
-/* Sub-navigation */
-.subnav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.9rem;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.subnav span a {
-  color: #000;
-  text-decoration: none;
-}
-
-.subnav > a {
-  /* styles ici */
-  color: #f57c00;
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.subnav a:last-child {
-  font-style: italic;
-  font-size: 0.9rem;
-  text-decoration: none;
-}
-
-/* Headings */
-h1 {
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-  font-weight: 700;
-  font-family: "Poppins";
-}
-
-h2.date {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #f57c00;
-  margin-bottom: 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Poppins";
-}
-
-h3 {
-  font-size: 1.25rem;
-  margin-bottom: 1rem;
-}
 
 /* Menu Week Section */
 .menu-week {
@@ -120,10 +56,4 @@ h3 {
   }
 }
 
-.weekly-menu {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 64px;
-  align-self: stretch;
-}
+

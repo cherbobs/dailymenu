@@ -141,7 +141,7 @@
     --texte-clear-parameters-font-family: "Poppins Medium", Helvetica;
     --texte-clear-parameters-font-weight: 500;
     --texte-clear-parameters-font-size: 1.5rem;
-  
+
     --texte-alertes-font-family: "Roboto Regular", Helvetica;
     --texte-alertes-font-weight: 400;
     --texte-alertes-font-size: 1rem;
@@ -233,32 +233,19 @@
   }
 }
 
-/* BASE GÉNÉRALE */
-html {
-  font-size: 16px;
-  margin: 0;
-}
-
-main {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--megalarge);
-  padding: var(--megalarge);
-}
-
-a {
-  text-decoration: none;
-  color: var(--grey);
-}
-
-.breadcrumb {
-  color: var(--grey);
-  margin-bottom: var(--mililarge);
-  font-family: var(--texte-breadcrumb-font-family);
-  font-weight: var(--texte-breadcrumb-font-weight);
-  font-size: var(--texte-breadcrumb-font-size);
+.dyslexic-mode {
+  --header-font-family: "OpenDyslexic Regular", sans-serif;
+  --button-font-family: "OpenDyslexic Regular", sans-serif;
+  --h1-font-family: "OpenDyslexic Bold", sans-serif;
+  --h2-font-family: "OpenDyslexic Bold", sans-serif;
+  --h3-font-family: "OpenDyslexic Bold", sans-serif;
+  --h4-font-family: "OpenDyslexic Regular", sans-serif;
+  --h5-font-family: "OpenDyslexic Bold", sans-serif;
+  --texte-font-family: "OpenDyslexic Regular", sans-serif;
+  --texte-allergenes-font-family: "OpenDyslexic Regular", sans-serif;
+  --texte-breadcrumb-font-family: "OpenDyslexic Regular", sans-serif;
+  --texte-clear-parameters-font-family: "OpenDyslexic Regular", sans-serif;
+  --texte-alertes-font-family: "OpenDyslexic Regular", sans-serif;
 }
 
 /* Polices */
@@ -282,6 +269,7 @@ h3 {
   font-family: var(--h3-font-family);
   font-weight: var(--h3-font-weight);
   font-size: var(--h3-font-size);
+  padding: var(--mililarge) 0;
 }
 
 h4 {
@@ -290,19 +278,121 @@ h4 {
   font-size: var(--h4-font-size);
 }
 
+/* BASE GÉNÉRALE */
+html {
+  font-size: 16px;
+  margin: 0;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--megalarge);
+  padding: var(--megalarge);
+}
+
+a {
+  text-decoration: none;
+  color: var(--grey);
+}
+
+/* INTRODUCTION */
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  align-self: stretch;
+}
+
+.breadcrumb {
+  color: var(--grey);
+  margin-bottom: var(--mililarge);
+  font-family: var(--texte-breadcrumb-font-family);
+  font-weight: var(--texte-breadcrumb-font-weight);
+  font-size: var(--texte-breadcrumb-font-size);
+}
+
+#download-menu {
+  color: #ff8c00;
+  font-family: Roboto;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-skip-ink: auto;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+
+/* MENUS */
+.weekly-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gigalarge);
+  align-self: stretch;
+}
+
+.menu-date-section {
+  display: flex;
+  padding: 0px var(--teralarge);
+  flex-direction: column;
+  align-items: center;
+  gap: var(--megalarge);
+  align-self: stretch;
+}
+
+h2.date {
+  color: var(--primary-color);
+}
+
+.menu-section {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-content: flex-start;
+  gap: var(--petalarge);
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+.menu-block {
+  flex: 1 1 45%;
+}
 
 
-.dyslexic-mode {
-  --header-font-family: "OpenDyslexic Regular", sans-serif;
-  --button-font-family: "OpenDyslexic Regular", sans-serif;
-  --h1-font-family: "OpenDyslexic Bold", sans-serif;
-  --h2-font-family: "OpenDyslexic Bold", sans-serif;
-  --h3-font-family: "OpenDyslexic Bold", sans-serif;
-  --h4-font-family: "OpenDyslexic Regular", sans-serif;
-  --h5-font-family: "OpenDyslexic Bold", sans-serif;
-  --texte-font-family: "OpenDyslexic Regular", sans-serif;
-  --texte-allergenes-font-family: "OpenDyslexic Regular", sans-serif;
-  --texte-breadcrumb-font-family: "OpenDyslexic Regular", sans-serif;
-  --texte-clear-parameters-font-family: "OpenDyslexic Regular", sans-serif;
-  --texte-alertes-font-family: "OpenDyslexic Regular", sans-serif;
+.menu-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--microlarge);
+}
+
+.menu-list li {
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid var(--primary-color);
+  border-radius: var(--picolarge);
+  padding: var(--nanolarge);
+  background: var(--white);
+  gap: var(--microlarge);
+}
+
+.menu-list img.icon {
+  width: var(--kilolarge);
+  height: var(--kilolarge);
+  object-fit: contain;
+}
+
+.allergenes {
+  color: var(--grey);
+  margin-top: var(--picolarge);
+  font-family: var(--texte-allergenes-font-family);
+  font-weight: var(--texte-allergenes-font-weight);
+  font-size: var(--texte-allergenes-font-size);
 }
