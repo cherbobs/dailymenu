@@ -23,7 +23,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Menu burger
       const burgerMenu = document.getElementById("burger-menu");
-      const mobileMenuContainer = document.getElementById("mobile-menu-container");
+      const mobileMenuContainer = document.getElementById(
+        "mobile-menu-container"
+      );
 
       if (burgerMenu && mobileMenuContainer) {
         burgerMenu.addEventListener("click", () => {
@@ -72,8 +74,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ========== TAILLE DU TEXTE ==========
   const slider = document.getElementById("slider");
-  const valueDisplay = document.getElementById("value");
-  const textDemo = document.getElementById("text");
 
   function applyGlobalFontSize(size) {
     document.documentElement.style.fontSize = `${size}px`;
@@ -81,30 +81,28 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateSliderBackground(value) {
-    const min = slider?.min;
-    const max = slider?.max;
+    const min = parseInt(slider?.min);
+    const max = parseInt(slider?.max);
     const percent = ((value - min) / (max - min)) * 100;
     if (slider) {
       slider.style.background = `linear-gradient(to right, orange ${percent}%, #ccc ${percent}%)`;
     }
   }
 
-  const savedSize = localStorage.getItem("fontSize") || 16;
+  const savedSize = parseInt(localStorage.getItem("fontSize")) || 16;
   document.documentElement.style.fontSize = `${savedSize}px`;
+
   if (slider) {
+    slider.max = "36"; // Définit dynamiquement le maximum à 36 si besoin
     slider.value = savedSize;
     updateSliderBackground(savedSize);
   }
-  if (valueDisplay) valueDisplay.textContent = `${savedSize} px`;
-  if (textDemo) textDemo.style.fontSize = `${savedSize}px`;
 
   // Debounce lors du changement
   let debounceTimer;
   slider?.addEventListener("input", () => {
     const size = slider.value;
     updateSliderBackground(size);
-    valueDisplay.textContent = `${size} px`;
-    if (textDemo) textDemo.style.fontSize = `${size}px`;
 
     clearTimeout(debounceTimer);
     debounceTimer = setTimeout(() => {
