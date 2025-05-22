@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
+  const root = document.documentElement;
+
   // ========== NAVBAR ==========
   fetch("navbar.html")
     .then((response) => response.text())
     .then((data) => {
       document.getElementById("navbar-container").innerHTML = data;
 
-      // Activer le lien de la page courante
       const currentPage = window.location.pathname.split("/").pop();
       const navLinks = document.querySelectorAll(".nav-links a");
 
@@ -48,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // ========== MODE DYSLEXIQUE ==========
   const toggle2 = document.getElementById("toggleBtn2");
-  const root = document.documentElement;
 
   function setDyslexicMode(enabled) {
     if (enabled) {
@@ -72,11 +72,36 @@ document.addEventListener("DOMContentLoaded", () => {
     setDyslexicMode(!isActive);
   });
 
+  // ========== MODE CONTRASTE ==========
+  const toggle1 = document.getElementById("toggleBtn1");
+
+  function setContrastMode(enabled) {
+    if (enabled) {
+      root.classList.add("high-contrast-mode");
+      toggle1?.classList.add("active");
+      toggle1?.setAttribute("aria-checked", "true");
+      localStorage.setItem("contrast", "true");
+    } else {
+      root.classList.remove("high-contrast-mode");
+      toggle1?.classList.remove("active");
+      toggle1?.setAttribute("aria-checked", "false");
+      localStorage.setItem("contrast", "false");
+    }
+  }
+
+  const savedContrast = localStorage.getItem("contrast") === "true";
+  setContrastMode(savedContrast);
+
+  toggle1?.addEventListener("click", () => {
+    const isActive = toggle1.classList.contains("active");
+    setContrastMode(!isActive);
+  });
+
   // ========== TAILLE DU TEXTE ==========
   const slider = document.getElementById("slider");
 
   function applyGlobalFontSize(size) {
-    document.documentElement.style.fontSize = `${size}px`;
+    root.style.fontSize = `${size}px`;
     localStorage.setItem("fontSize", size);
   }
 
@@ -85,28 +110,56 @@ document.addEventListener("DOMContentLoaded", () => {
     const max = parseInt(slider?.max);
     const percent = ((value - min) / (max - min)) * 100;
     if (slider) {
-      slider.style.background = `linear-gradient(to right, orange ${percent}%, #ccc ${percent}%)`;
+      slider.style.background = `linear-gradient(to right, var(--primary-color) ${percent}%, #ccc ${percent}%)`;
     }
   }
 
   const savedSize = parseInt(localStorage.getItem("fontSize")) || 16;
-  document.documentElement.style.fontSize = `${savedSize}px`;
+  root.style.fontSize = `${savedSize}px`;
 
   if (slider) {
-    slider.max = "36"; // Définit dynamiquement le maximum à 36 si besoin
+    slider.max = "36";
     slider.value = savedSize;
     updateSliderBackground(savedSize);
+
+    let debounceTimer;
+    slider.addEventListener("input", () => {
+      const size = slider.value;
+      updateSliderBackground(size);
+
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        applyGlobalFontSize(size);
+      }, 300);
+    });
   }
 
-  // Debounce lors du changement
-  let debounceTimer;
-  slider?.addEventListener("input", () => {
-    const size = slider.value;
-    updateSliderBackground(size);
+  // ========== RÉINITIALISATION ==========
+  const resetBtn = document.getElementById("resetBtn");
 
-    clearTimeout(debounceTimer);
-    debounceTimer = setTimeout(() => {
-      applyGlobalFontSize(size);
-    }, 300);
+  resetBtn?.addEventListener("click", () => {
+    // Supprimer les classes de mode
+    root.classList.remove("dyslexic-mode", "high-contrast-mode");
+
+    // Réinitialiser font-size
+    root.style.fontSize = "16px";
+
+    // Réinitialiser les switches visuellement
+    toggle1?.classList.remove("active");
+    toggle1?.setAttribute("aria-checked", "false");
+
+    toggle2?.classList.remove("active");
+    toggle2?.setAttribute("aria-checked", "false");
+
+    // Réinitialiser le slider
+    if (slider) {
+      slider.value = 16;
+      updateSliderBackground(16);
+    }
+
+    // Nettoyer le localStorage
+    localStorage.removeItem("dyslexic");
+    localStorage.removeItem("contrast");
+    localStorage.removeItem("fontSize");
   });
 });
