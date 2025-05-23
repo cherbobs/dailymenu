@@ -248,16 +248,18 @@
 
 .high-contrast-mode {
   --primary-color: #000000;
+  --dark-primary-color: #555;
+  --light-primary-color: #dddbdb;
 }
 
 /* === Polices === */
-h1 {
+:where(h1) {
   font-family: var(--h1-font-family);
   font-weight: var(--h1-font-weight);
   font-size: var(--h1-font-size);
 }
 
-h2 {
+:where(h2) {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -266,26 +268,26 @@ h2 {
   font-size: var(--h2-font-size);
 }
 
-h3 {
+:where(h3) {
   font-family: var(--h3-font-family);
   font-weight: var(--h3-font-weight);
   font-size: var(--h3-font-size);
   padding: var(--mililarge) 0;
 }
 
-h4 {
+:where(h4) {
   font-family: var(--h4-font-family);
   font-weight: var(--h4-font-weight);
   font-size: var(--h4-font-size);
 }
 
-h5 {
+:where(h5) {
   font-family: var(--h5-font-family);
   font-weight: var(--h5-font-weight);
   font-size: var(--h5-font-size);
 }
 
-h6 {
+:where(h6) {
   font-family: var(--texte-font-family);
   font-weight: var(--texte-font-weight);
   font-size: var(--texte-font-size);
@@ -645,7 +647,7 @@ h2.date {
   position: relative;
   width: calc(5 * var(--teralarge));
   text-align: center;
-  border: 1.5px solid orange;
+  border: 1.5px solid var(--primary-color);
   padding: 0 0 var(--microlarge) 0px;
   border-radius: var(--picolarge);
   margin-bottom: var(--mililarge);
